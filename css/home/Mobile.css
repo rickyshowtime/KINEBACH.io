@@ -1,0 +1,181 @@
+@media (max-width: 900px) {
+	
+html, body { height: 100%; width: 100%; margin: 0; overflow-x: hidden;}
+
+html {
+	font-family: 'Lato', sans-serif;
+	box-sizing: border-box;
+}
+
+body{
+	font-size: 16px;
+	
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+h1 {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 32px;
+	font-weight: 300;
+	margin-bottom: 0.8em;
+}
+
+h2 {
+	font-size: 16px;
+	font-weight: 300;
+	margin-bottom: 0.8em;
+}
+
+.subtitle {
+	color: inherit;
+	font-size: 10px;
+	margin-bottom: 0.8em;
+}
+
+p {
+	font-size: 14px;
+	margin-bottom: 0.8em;
+}
+
+.center {
+	width: 100%;
+	margin: auto;
+}
+
+
+/* LAYOUT
+ * Dimenssions et positionnement des choses
+------------------------------------------------*/
+
+/* BODY ../../../../../../../../../../../../../../../../../../../../../../../../*/
+
+ body {
+  margin: 0;
+  background: #000; 
+}
+
+video { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+	background: url(../../medias/site-assets/wallpaper.jpg) fixed no-repeat;
+	background-size: cover;
+    transition: 1s opacity;
+}
+
+/* HEADER ../../../../../../../../../../../../../../../../../../../../../../../../*/
+
+	.nav-hide {
+		display:none;
+	}
+	header nav {
+		position: absolute;
+		background: rgba(0,0,0,0.8) ;
+		text-align: center;
+		list-style:none;
+	padding: 20% 0 0 0;
+		width:100%;
+		height:100% 
+	}
+
+	nav li {
+		display:flex;
+	}
+
+	nav li a {
+		color:#C8A596;
+		font-size: 1.5em;
+		padding: 10% 0;
+	}
+
+	nav li span:hover {
+		color: #97644F;
+}
+
+	.active {
+		color: #97644F;
+	}
+	
+	.navbar-toggle {
+	  position: fixed;
+	  top: 20px;
+	  right: 20px;
+	  width: 45px;
+	  height: 45px;
+	  z-index: 20;
+	  cursor: pointer;
+	}
+
+	.bar1,
+	.bar2,
+	.bar3 {
+	  width: 80%;
+	  height: 5px;
+	  margin-bottom: 5px;
+	  background-color: #fff;
+	  transition: all 0.3s ease-in-out;
+	
+	}
+
+	.navbar-on .bar1,
+	.navbar-on .bar2,
+	.navbar-on .bar3 { background-color: white; }
+
+	.navbar-on .bar1 {
+	  transform-origin: 10% 40%;
+	  transform: rotate(45deg);
+	}
+
+	.navbar-on .bar3 {
+	  transform-origin: 10% 40%;
+	  transform: rotate(-45deg);
+	}
+
+	.navbar-on .bar2 { background-color: transparent; }
+
+
+/* MAIN ../../../../../../../../../../../../../../../../../../../../../../../../*/
+
+	/* Logo */
+	#logo img {
+		display: block;
+		margin: auto;
+		padding-top: 40%;
+		width:35%;
+	}
+
+	/* Title */
+	#title {
+		margin: auto;
+		padding-top: 2%;
+		text-align: center;
+		letter-spacing: 4px;
+	
+	}
+	#name{
+		margin: auto;
+		padding-top: 1%;
+		text-align: center;
+		letter-spacing: 5px;
+	}
+	/* Citation */
+	#citation{
+		margin: auto;
+		padding-top: 2%;
+		text-align: center;
+		font-weight: 300;
+		font-style: italic;
+		max-width:75%
+	}
+/* FOOTER ../../../../../../../../../../../../../../../../../../../../../../../../*/
+}

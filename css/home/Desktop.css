@@ -1,0 +1,145 @@
+@media (min-width: 900px) {
+	
+html, body { height: 100%; width: 100%; margin: 0; overflow-x: hidden;}
+
+html {
+	font-family: 'Lato', sans-serif;
+	box-sizing: border-box;
+}
+
+body{
+	font-size: 16px;
+	
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+h1 {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 32px;
+	font-weight: 300;
+	margin-bottom: 0.8em;
+}
+
+h2 {
+	font-size: 16px;
+	font-weight: 300;
+	margin-bottom: 0.8em;
+}
+
+.subtitle {
+	color: inherit;
+	font-size: 10px;
+	margin-bottom: 0.8em;
+}
+
+p {
+	font-size: 14px;
+	margin-bottom: 0.8em;
+}
+
+.center {
+	width: 100%;
+	margin: auto;
+}
+
+
+/* LAYOUT
+ * Dimenssions et positionnement des choses
+------------------------------------------------*/
+
+/* BODY ../../../../../../../../../../../../../../../../../../../../../../../../*/
+
+ body {
+  margin: 0;
+  background: #000; 
+}
+
+video { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+	background: url(../../medias/site-assets/wallpaper.jpg) fixed no-repeat;
+	background-size: cover;
+    transition: 1s opacity;
+}
+
+/* HEADER ../../../../../../../../../../../../../../../../../../../../../../../../*/
+
+	@media (min-width: 960px) {
+	#menuburger{
+		display:none;
+	}
+
+	header nav {
+		background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		padding: 1% 0 5%;
+		margin: 0 auto;
+		text-align: center;
+		list-style:none;
+	}
+
+	nav li {
+		display: inline-block;
+	}
+
+	nav li a {
+		color:#C8A596;
+		padding: 0 2em;
+	}
+
+
+	nav li span:hover {
+		color: #97644F;
+}
+
+	.active {
+		color: #97644F;
+	}
+
+
+/* MAIN ../../../../../../../../../../../../../../../../../../../../../../../../*/
+
+	/* Logo */
+	#logo img {
+		display: block;
+		margin: auto;
+		padding-top: 5%;
+		width:15%;
+	}
+
+	/* Title */
+	#title {
+		margin: auto;
+		padding-top: 2%;
+		text-align: center;
+		letter-spacing: 4px;
+	
+	}
+	#name{
+		margin: auto;
+		padding-top: 1%;
+		text-align: center;
+		letter-spacing: 5px;
+	}
+	/* Citation */
+	#citation{
+		margin: auto;
+		padding-top: 2%;
+		text-align: center;
+		font-weight: 300;
+		font-style: italic;
+		max-width:22%
+	}
+
+/* FOOTER ../../../../../../../../../../../../../../../../../../../../../../../../*/
+}
