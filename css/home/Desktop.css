@@ -102,7 +102,13 @@ video {
 }
 
 	.active {
-		color: #97644F;
+		border-bottom:solid 2px #C8A596;
+		border-bottom-width: 1px;
+		padding-bottom: 5px;
+		border-bottom-left-radius: 0.5px;
+		border-bottom-right-radius: 0.5px;
+		*transition: all 0.2s ease-in-out;
+		*color: #97644F;
 	}
 
 
