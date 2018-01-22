@@ -74,6 +74,7 @@ video {
 	}
 	header nav {
 		position: absolute;
+		z-index: 99;
 		background: rgba(224, 224, 224, 0.95) ;
 		text-align: center;
 		list-style:none;
