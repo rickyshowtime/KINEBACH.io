@@ -123,7 +123,7 @@ video {
 
 	.navbar-on .bar1,
 	.navbar-on .bar2,
-	.navbar-on .bar3 { background-color: white; }
+	.navbar-on .bar3 { background-color: black; }
 
 	.navbar-on .bar1 {
 	  background-color: #fff;
