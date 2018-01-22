@@ -117,13 +117,17 @@ video {
 	  height: 5px;
 	  margin-bottom: 5px;
 	  background-color: #000;
+	  border-radius: 5px;
 	  transition: all 0.3s ease-in-out;
 	
 	}
 
 	.navbar-on .bar1,
 	.navbar-on .bar2,
-	.navbar-on .bar3 { background-color: #000; }
+	.navbar-on .bar3 { 
+	background-color: #000; 
+	
+	}
 
 	.navbar-on .bar1 {
 	  background-color: #fff;
