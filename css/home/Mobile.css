@@ -123,16 +123,16 @@ video {
 
 	.navbar-on .bar1,
 	.navbar-on .bar2,
-	.navbar-on .bar3 { background-color: black; }
+	.navbar-on .bar3 { background-color: #000; }
 
 	.navbar-on .bar1 {
-	  background-color: #000;
+	  background-color: #fff;
 	  transform-origin: 10% 40%;
 	  transform: rotate(45deg);
 	}
 
 	.navbar-on .bar3 {
-	  background-color: #000;
+	  background-color: #fff;
 	  transform-origin: 10% 40%;
 	  transform: rotate(-45deg);
 	}
