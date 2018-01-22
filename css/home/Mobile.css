@@ -116,7 +116,7 @@ video {
 	  width: 80%;
 	  height: 5px;
 	  margin-bottom: 5px;
-	  background-color: #fff;
+	  background-color: #000;
 	  transition: all 0.3s ease-in-out;
 	
 	}
@@ -126,11 +126,13 @@ video {
 	.navbar-on .bar3 { background-color: white; }
 
 	.navbar-on .bar1 {
+	  background-color: #fff;
 	  transform-origin: 10% 40%;
 	  transform: rotate(45deg);
 	}
 
 	.navbar-on .bar3 {
+	  background-color: #fff;
 	  transform-origin: 10% 40%;
 	  transform: rotate(-45deg);
 	}
