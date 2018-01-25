@@ -5,7 +5,8 @@
  *
  * Copyright (C) 2015 alvarotrigo.com - A project by Alvaro Trigo
  */
-(function(global, factory) {
+
+ (function(global, factory) {
     'use strict';
     if (typeof define === 'function' && define.amd) {
         define(['jquery'], function($) {
@@ -116,7 +117,7 @@
             //scrolling
             css3: true,
             scrollingSpeed: 700,
-            autoScrolling: true,
+            autoScrolling: false,
             fitToSection: true,
             fitToSectionDelay: 1000,
             easing: 'easeInOutCubic',
@@ -140,7 +141,8 @@
             touchSensitivity: 5,
             normalScrollElementTouchThreshold: 5,
             bigSectionsDestination: null,
-
+		
+			
             //Accessibility
             keyboardScrolling: true,
             animateAnchor: true,
@@ -154,7 +156,7 @@
             paddingTop: 0,
             paddingBottom: 0,
             fixedElements: null,
-            responsive: 0, //backwards compabitility with responsiveWiddth
+            responsive: 900, //backwards compabitility with responsiveWiddth
             responsiveWidth: 0,
             responsiveHeight: 0,
             responsiveSlides: false,
@@ -164,6 +166,7 @@
                 percentage: 62,
                 property: 'translate'
             },
+			
 
             //Custom selectors
             sectionSelector: SECTION_DEFAULT_SEL,
@@ -181,7 +184,7 @@
 
             lazyLoading: true
         }, options);
-
+		
         //flag to avoid very fast sliding for landscape sliders
         var slideMoving = false;
 
@@ -206,6 +209,8 @@
             touchstart: 'ontouchstart' in window ? 'touchstart' :  MSPointer.down
         };
         var scrollBarHandler;
+        var scrollBarHandler;
+
 
         //timeouts
         var resizeId;
@@ -486,8 +491,8 @@
 
             if(active){
                 if(!isResponsive){
-                    setAutoScrolling(false, 'internal');
-                    setFitToSection(false, 'internal');
+                    setAutoScrolling(true, 'internal');
+                    setFitToSection(true, 'internal');
                     $(SECTION_NAV_SEL).hide();
                     $body.addClass(RESPONSIVE);
                     $.isFunction( options.afterResponsive ) && options.afterResponsive.call( container, active);
@@ -2855,4 +2860,5 @@
         }
 
     }; //end of $.fn.fullpage
+	
 });

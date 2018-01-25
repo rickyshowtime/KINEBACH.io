@@ -5,7 +5,7 @@
 <title>KINEBACH</title>
 
 <!-- CSS RESET -->
-<link rel="stylesheet" type="text/css" href="css/reset.css">
+<!-- <link rel="stylesheet" type="text/css" href="css/reset.css"> -->
 
 <link href="css/home/Desktop.css" rel="stylesheet" type="text/css">
 <link href="css/home/Mobile.css" rel="stylesheet" type="text/css">
@@ -15,7 +15,7 @@
 <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Quicksand:300,400,500,700" rel="stylesheet">
   
 <!-- FONTAWESOME -->
-<link rel="stylesheet" href="img/font-awesome/css/font-awesome.min.css">
+<!-- <link rel="stylesheet" href="img/font-awesome/css/font-awesome.min.css"> -->
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <meta name="mobile-web-app-capable" content="yes">
@@ -29,7 +29,7 @@
 <meta property="og:description" content="Kinésiologue" />
 <meta property="og:image" itemprop="image" content="https://rickyshowtime.github.io/KINEBACH.io/medias/site-assets/Logo.png">
 <meta property="og:type" content="website" />
-<link rel="icon" href="../KINEBACH.io/medias/site-assets/favicon.ico">
+<link rel="icon" href="./medias/site-assets/favicon.ico">
 <link rel="apple-touch-startup-image" href="https://rickyshowtime.github.io/KINEBACH.io/medias/site-assets/Logo.png" />
 
 
@@ -38,7 +38,7 @@
 
 <body>
 
-<video poster="medias/site-assets/wallpaper.jpg" id="bgvid" playsinline autoplay muted loop>
+<video class="navbar-background" poster="medias/site-assets/wallpaper.jpg" id="bgvid" playsinline autoplay muted loop>
 <source src="medias/site-assets/KINEBACHBG.mp4" type="video/mp4">
 </video>
 
@@ -54,26 +54,46 @@
 		
   	</div>
 	
+
 	<nav class="nav-hide">
        <ul>
-		  <li><a href=""><span class="active">ACCEUIL</span></a></li>
-          <li><a href=""><span>LA KINÉSIOLOGIE</span></a></li>
-          <li><a href=""><span>LA SCÉANCE</span></a></li>
-          <li><a href=""><span>TARIFS</span></a></li>
-          <li><a href=""><span>CONTACTS</span></a></li>
+		  <li class="circle"><a href="#"><span class="active">ACCEUIL</span></a></li>
+          <li class="circle">
+			  <label for="drop-1"  class="toggle">LA KINÉSIOLOGIE</label>
+			  <a class="hide" href="#"><span>LA KINÉSIOLOGIE</span></a>
+			  <input type="checkbox" class="checkbox" id="drop-1"/>
+			  <ul>
+				<li><a href="#">Qu'est ce que c'est ?</a></li>
+				<li><a href="#">Techniques</a></li>
+				<li><a href="#">Techniques Complémentaires</a></li>
+			  </ul>
+		  </li>
+          <li class="circle"><a href="#"><span>LA SCÉANCE</span></a></li>
+          <li class="circle"><a href="#"><span>TARIFS</span></a></li>
+          <li class="circle">
+			  <label for="drop-2"  class="toggle">INFOS</label>
+			  <a class="hide" href="#"><span>INFOS</span></a>
+			  <input type="checkbox" class="checkbox" id="drop-2"/>
+			  <ul>
+				<li><a href="#">Horaires</a></li>
+				<li><a href="#">Itinéraire</a></li>
+				<li><a href="#">Contact</a></li>
+			  </ul>
+		  </li>
         </ul>
     </nav>
+
 
 	<!-- Header text... -->
 	
 
 </header>
 <!-- Main content -->
-<div id="fullpage">
+<div id="fullpage" class="navbar-background">
 <div class="section active" id="section0">
 <main>
 	<!-- logo... -->
-	<div id="logo"><img src="../KINEBACH.io/medias/site-assets/Logo.png"></div>
+	<div id="logo"><img src="./medias/site-assets/Logo.png"></div>
 	<!-- title... -->
 	<h1 id="title">KINÉ & BACH</h1>
 	<h2 id="name">Véronica Sudry</h2>
@@ -85,29 +105,16 @@
 </div>
 
     <div class="section " id="section1">
-        <h1>fullPage.js</h1>
-        <p>Continuous Scrolling Enabled</p>
-        <img src="imgs/fullPage.png" alt="fullPage" />
+        <h1></h1>
+        <p></p>
     </div>
     <div class="section " id="section2">
-        <div class="slide" id="slide1">
-            <div class="intro">
-                <h1>Around the world scrolling</h1>
-                <p>Go to the first section and scroll up or to the last one and scroll down to see how it works.</p>
-            </div>
-        </div>
-        <div class="slide " id="slide2">
-            <h1>Slide 2</h1>
-        </div>
-        <div class="slide" id="slide3">
-            <h1>Slide 3</h1>
-        </div>
 
     </div>
     <div class="section" id="section3">
         <div class="intro">
-            <h1>Scroll Down</h1>
-            <p>And it will animate down to the first section</p>
+            <h1></h1>
+            <p></p>
         </div>
     </div>
 </div>
@@ -118,17 +125,21 @@
 </body>
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/burgermenu.js"></script>
+<script src="js/desktopmenu.js"></script>
 <script>
+if (window.matchMedia("(max-width: 900px)").matches) {
 	$(function(){
-	  $('.navbar-toggle, nav').click(function(){
+	  $('.navbar-toggle').click(function(){
 		$('.navbar-toggle').toggleClass('navbar-on');
+		$('.navbar-background').toggleClass('navbar-on')
 		$('nav').fadeToggle();
 		$('nav').removeClass('nav-hide');
 	  });
 	});
+}
 </script>
-<script type="text/javascript" src="js/jquery.fullPage.js"></script>
-<script type="text/javascript">
+<script type="text/javascript" media="screen and (max-width: 900px)" src="js/jquery.fullPage.js"></script>
+<script media="screen and (max-width: 900px)" type="text/javascript">
         $(document).ready(function() {
             $('#fullpage').fullpage({
               sectionsColor: ['', '#C8A596', '#97644F', '#C8A596', '#97644F'],
@@ -136,5 +147,5 @@
               menu: '#menu',
             });
         });
-    </script>
+</script>
 </html>
