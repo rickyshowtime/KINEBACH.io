@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>KINEBACH</title>
+
+<!-- CSS RESET -->
+<!-- <link rel="stylesheet" type="text/css" href="css/reset.css"> -->
+
+<link href="css/home/Desktop.css" rel="stylesheet" type="text/css">
+<link href="css/home/Mobile.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
+
+<!-- GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Quicksand:300,400,500,700" rel="stylesheet">
+  
+<!-- FONTAWESOME -->
+<!-- <link rel="stylesheet" href="img/font-awesome/css/font-awesome.min.css"> -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+ 
+<title>KINÉ & BACH</title>
+<meta name="apple-mobile-web-app-status-bar-style" content="#C8A596" />
+<meta name="theme-color" content="#C8A596" />
+<meta property="og:site_name" content="KINEBACH.io">
+<meta property="og:title" content="KINÉ & BACH" />
+<meta property="og:description" content="Kinésiologue" />
+<meta property="og:image" itemprop="image" content="https://rickyshowtime.github.io/KINEBACH.io/medias/site-assets/Logo.png">
+<meta property="og:type" content="website" />
+<link rel="icon" href="./medias/site-assets/favicon.ico">
+<link rel="apple-touch-startup-image" href="https://rickyshowtime.github.io/KINEBACH.io/medias/site-assets/Logo.png" />
+
+
+  
+</head>
+
+<body>
+
+<video class="navbar-background" poster="medias/site-assets/wallpaper.jpg" id="bgvid" playsinline autoplay muted loop>
+<source src="medias/site-assets/KINEBACHBG.mp4" type="video/mp4">
+</video>
+
+<!-- The Header -->
+<header>
+	<!-- navigation... -->
+	 <div id="menuburger">
+		<div class="navbar-toggle" onclick="setdrop1(false); setdrop2(false)">
+		  <div class="bar1"></div>
+		  <div class="bar2"></div>
+		  <div class="bar3"></div>
+		</div>
+		
+  	</div>
+	
+
+	<nav class="nav-hide">
+       <ul>
+		  <li class="circle"><a href="./index.html"><span>ACCEUIL</span></a></li>
+          <li class="circle">
+			  <label for="drop-1"  class="toggle">LA KINÉSIOLOGIE</label>
+			  <a class="hide active" href="#"><span>LA KINÉSIOLOGIE</span></a>
+			  <input type="checkbox" class="checkbox" onclick="setdrop2(false)" id="drop-1"/>
+			  <ul>
+				<li><a href="#section0">Qu'est ce que c'est ?</a></li>
+				<li><a href="#section1">Techniques</a></li>
+				<li><a href="#">Techniques Complémentaires</a></li>
+			  </ul>
+		  </li>
+          <li class="circle"><a href="#"><span>LA SCÉANCE</span></a></li>
+          <li class="circle"><a href="#"><span>TARIFS</span></a></li>
+          <li class="circle">
+			  <label for="drop-2"  class="toggle">INFORMATIONS</label>
+			  <a class="hide" href="#"><span>INFORMATIONS</span></a>
+			  <input type="checkbox" class="checkbox" onclick="setdrop1(false)" id="drop-2"/>
+			  <ul>
+				<li><a href="#">Horaires</a></li>
+				<li><a href="#">Itinéraire</a></li>
+				<li><a href="#">Contact</a></li>
+			  </ul>
+		  </li>
+        </ul>
+    </nav>
+
+
+	<!-- Header text... -->
+	
+
+</header>
+<!-- Main content -->
+
+<div id="fullpage" class="navbar-background">
+<div class="section active" id="section0">
+<p class="quoi">Ce qui différencie la Kinésiologie des autres méthodes naturelles est l’utilisation du test musculaire (Touch for Health) pour communiquer avec votre mémoire cellulaire afin de détecter les états du déséquilibre de l’énergie qui circule à travers les méridiens du corps, et non en traitant les symptômes d’une maladie diagnostiquée, qui est réservé au médecin.
+La réponse musculaire échappe au contrôle du mental conscient.</p>
+<p class="quoi">Toutes les expériences du passé (douleurs émotionnelles, peurs, etc.) se trouvent enregistrées par les neurones et les cellules des tissus, nerfs et muscles, et ceci depuis notre conception.
+Grâce au test musculaire, nous communiquons avec la conscience du corps et nous accédons à cette mémoire.</p>
+<p class="quoi">En douceur, avec respect et à votre rythme, la Kinésiologie ne change pas la mémoire du traumatisme ou du stress, mais la réaction à ces événements afin que vous disposiez du merveilleux potentiel de votre cerveau antérieur, le cortex frontal, siège des processus décisionnels, du choix.</p>
+</div>
+
+<div class="section" id="section1">
+<article>
+        <!-- An article header... -->
+        <div id="ArticleTitle">
+        <h1></h1>
+		<p></p>
+		</div>
+        
+		<ul class="flex-container">
+        <!-- A section... -->
+        <section class="sectionB" id="s1">
+          <!-- A section header... -->
+          <figure class="section-icon"><i class="fa fa-calendar" aria-hidden="true"></i></figure>
+          <div id="scroll" class="section-textB">
+						<h2><a>Touch for Health</a></h2>
+						<p class="p-on-white" id="countdown"></p>
+          </div>
+          
+       	</section>
+
+        <section onclick="location.href=" " style="cursor: pointer" class="sectionB" id="s2">
+         	<figure class="section-icon"><i class="fa fa-bullhorn" aria-hidden="true"></i></figure>
+         	<div class="section-textB">
+						<h2>Brain Gym</h2>
+						<p class="p-on-white"></p>
+       
+            </div>
+        </section>
+        
+        <section onclick="location.href="" style="cursor: pointer" class="sectionB background" id="s3">
+    
+         	<figure class="section-icon"><i class="fa fa-ticket" aria-hidden="true"></i></figure>
+         	<div class="section-textB">
+						<h2>One Brain</h2>
+						<p class="p-on-white"></p>
+					</div>
+        </section>
+        
+        <section class="sectionB" id="s4">
+          <figure class="section-icon"><i class="fa fa-camera-retro" aria-hidden="true"></i></figure>
+         	<div class="section-textB">
+						<h2>Comportements Somatiques</h2>
+						<p class="p-on-white"></p>
+					</div>
+        </section>
+		
+		<section class="sectionB" id="s5">
+          <figure class="section-icon"><i class="fa fa-camera-retro" aria-hidden="true"></i></figure>
+         	<div class="section-textB">
+						<h2>Barrage Energétiques</h2>
+						<p class="p-on-white"></p>
+					</div>
+        </section>
+        </ul>
+      </article>
+</div>
+
+
+<!-- footer... -->
+
+
+
+</body>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/burgermenu.js"></script>
+<script src="js/desktopmenu.js"></script>
+<script>
+if (window.matchMedia("(max-width: 900px)").matches) {
+	$(function(){
+	  $('.navbar-toggle').click(function(){
+		$('.navbar-toggle').toggleClass('navbar-on');
+		$('.navbar-background').toggleClass('navbar-on')
+		$('nav').fadeToggle();
+		$('nav').removeClass('nav-hide');
+	  });
+	});
+}
+</script>
+<script type="text/javascript" media="screen and (max-width: 900px)" src="js/jquery.fullPage.js"></script>
+<script media="screen and (max-width: 900px)" type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+              sectionsColor: ['', '#C8A596', '#EAE0DB', '#C8A596', '#EAE0DB'],
+              anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+              menu: '#menu',
+            });
+        });
+</script>
+</html>

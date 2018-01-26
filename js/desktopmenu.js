@@ -7,7 +7,7 @@ $(window).on('scroll',function(){
     // we round here to reduce a little workload
     var stop = Math.round($(window).scrollTop());
 
-    if (stop > mainbottom + 100) {
+    if (stop > mainbottom + 200) {
         $('nav li a').addClass('past-main');
         $('nav li span').addClass('past-main');
 		$('.active').addClass('past-main');
@@ -19,4 +19,17 @@ $(window).on('scroll',function(){
 		$('.circle').removeClass('past-main');
     }
 
+});
+
+$('a').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $(this).attr('href') ).offset().top
+    }, 500);
+    return false;
+});
+
+
+$(document).ready(function() {
+    $('.nav-hide').addClass('loaded');
+	$('.section').addClass('loaded');
 });

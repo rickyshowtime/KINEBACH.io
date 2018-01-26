@@ -46,7 +46,7 @@
 <header>
 	<!-- navigation... -->
 	 <div id="menuburger">
-		<div class="navbar-toggle">
+		<div class="navbar-toggle" onclick="setdrop1(false); setdrop2(false)">
 		  <div class="bar1"></div>
 		  <div class="bar2"></div>
 		  <div class="bar3"></div>
@@ -57,23 +57,23 @@
 
 	<nav class="nav-hide">
        <ul>
-		  <li class="circle"><a href="#"><span class="active">ACCEUIL</span></a></li>
+		  <li class="circle"><a href="./index.html"><span class="active">ACCEUIL</span></a></li>
           <li class="circle">
 			  <label for="drop-1"  class="toggle">LA KINÉSIOLOGIE</label>
-			  <a class="hide" href="#"><span>LA KINÉSIOLOGIE</span></a>
-			  <input type="checkbox" class="checkbox" id="drop-1"/>
+			  <a class="hide" href="./kinesiology.html"><span>LA KINÉSIOLOGIE</span></a>
+			  <input type="checkbox" class="checkbox" onclick="setdrop2(false)" id="drop-1"/>
 			  <ul>
-				<li><a href="#">Qu'est ce que c'est ?</a></li>
-				<li><a href="#">Techniques</a></li>
+				<li><a href="./kinesiology.html#firstPage">Qu'est ce que c'est ?</a></li>
+				<li><a href="./kinesiology.html#secondPage">Techniques</a></li>
 				<li><a href="#">Techniques Complémentaires</a></li>
 			  </ul>
 		  </li>
           <li class="circle"><a href="#"><span>LA SCÉANCE</span></a></li>
           <li class="circle"><a href="#"><span>TARIFS</span></a></li>
           <li class="circle">
-			  <label for="drop-2"  class="toggle">INFOS</label>
+			  <label for="drop-2"  class="toggle">INFORMATIONS</label>
 			  <a class="hide" href="#"><span>INFORMATIONS</span></a>
-			  <input type="checkbox" class="checkbox" id="drop-2"/>
+			  <input type="checkbox" class="checkbox" onclick="setdrop1(false)" id="drop-2"/>
 			  <ul>
 				<li><a href="#">Horaires</a></li>
 				<li><a href="#">Itinéraire</a></li>
@@ -91,7 +91,6 @@
 <!-- Main content -->
 <div id="fullpage" class="navbar-background">
 <div class="section active" id="section0">
-<main>
 	<!-- logo... -->
 	<div id="logo"><img src="./medias/site-assets/Logo.png"></div>
 	<!-- title... -->
@@ -101,7 +100,6 @@
 	<div id="citation">
 	<p>"Peu importe qui vous êtes ou qui vous avez été, vous pouvez être qui vous voulez" - W. Clement Stone</p>
 	</div>
-</main>
 </div>
 
     <div class="section " id="section1">
@@ -142,7 +140,7 @@ if (window.matchMedia("(max-width: 900px)").matches) {
 <script media="screen and (max-width: 900px)" type="text/javascript">
         $(document).ready(function() {
             $('#fullpage').fullpage({
-              sectionsColor: ['', '#C8A596', '#97644F', '#C8A596', '#97644F'],
+              sectionsColor: ['', '#C8A596', '#EAE0DB', '#C8A596', '#EAE0DB'],
               anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
               menu: '#menu',
             });
