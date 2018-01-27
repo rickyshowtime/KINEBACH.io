@@ -84,13 +84,24 @@ video {
 		position:fixed;
 		width:100%;
 		z-index: 99;
-		padding: 1% 0 5% 0;
+		padding: 0 0 0 0;
 		margin: 0 auto;
 		text-align: center;
 		list-style:none;
 		font-size: 1.3em;
 		opacity: 0;
         transition: opacity 1s;
+		transition: all 0.4s;
+	}
+	
+	.nav-hide.roll{
+		background-color:#fff;
+		padding: 0 0 6% 0;
+		transition: all 0.3s;
+	}
+	
+	.nav-hide.past-main {
+		background-color:#fff;
 	}
 	
 	.loaded {
@@ -108,18 +119,10 @@ video {
 		font-weight:500;
 	}
 	
-	nav li a.past-main {
-		color:#fff;
-		font-weight:500;
-	}
 
 
 	nav li span:hover {
 		color: #97644F;
-	}
-	
-	nav li span.past-main:hover {
-		color: #fff;
 	}
 
 	.active {
@@ -132,10 +135,6 @@ video {
 		color: #97644F;
 	}
 	
-	.active.past-main {
-		border-bottom:solid 2px #fff;
-		color: #fff;
-	}
 
 	.checkbox {
 		display:none;
@@ -162,7 +161,7 @@ video {
 	nav ul li:hover > ul { 
 	  visibility: visible;
 	  opacity:1;
-	  padding: 10px 0;
+	  padding: 12px 0;
 	  transition: all 0.3s ease;
 	}
 
@@ -200,10 +199,6 @@ video {
 		z-index: -1;
 	}
 	
-	li.circle.past-main:before, li.circle.past-main:after {
-		border: 2px solid #fff;
-	}
-
 	li.circle:after
 	{
 		border-width: 2px;
