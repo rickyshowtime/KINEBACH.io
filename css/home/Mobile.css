@@ -79,7 +79,7 @@ video {
 	}
 	
 	header nav {
-		position: absolute;
+		position: fixed;
 		z-index: 99;
 		background: rgba(224, 224, 224, 0.75);
 		list-style:none;
@@ -140,14 +140,24 @@ video {
 		display:none;
 	}
 	
+	.navbar-toggle.loaded {
+		bottom: 3%;
+		padding: 5% 1.25% 0 3.5%;
+		top: 87%;
+		border-radius: 50px;
+		background-color: #fff;
+		transition: all 0.6s ease;
+	}
+	
 	.navbar-toggle {
 	  position: fixed;
-	  top: 20px;
-	  right: 20px;
+	  top: 3%;
+	  right: 3%;
 	  width: 45px;
 	  height: 45px;
 	  z-index: 100;
 	  cursor: pointer;
+	  transition: all 0.6s ease;
 	}
 
 	.bar1,
@@ -171,13 +181,15 @@ video {
 
 	.navbar-on .bar1 {
 	  background-color: #97644F;
-	  transform-origin: 10% 40%;
+	  transform-origin: 15% 40%;
+	  padding-left:4.5px;
 	  transform: rotate(45deg);
 	}
 
 	.navbar-on .bar3 {
 	  background-color: #97644F;
-	  transform-origin: 10% 40%;
+	  transform-origin: 15% 40%;
+		padding-left:4.5px;
 	  transform: rotate(-45deg);
 	}
 
@@ -227,10 +239,6 @@ video {
 		opacity:1;
 	}
 	
-	#section0 {
-		padding-top:6%;
-	}
-	
 	.quoi{
 		font-size: 14px;
 		padding: 0 10%;
@@ -252,16 +260,15 @@ video {
 	.flex-container {
 		display: flex;
 		flex-flow: row wrap;
-		width: 100%;
 		margin: auto;
 		margin-left: -2%;
 	  }	
 
 	.sectionB {
 		background-color: #e3e3e3;
-		margin: 0 0 0 0;
-		width: 85%;
-		height: 5em;
+		margin: 1% 0;
+		width: 90%;
+		height: 15em;
 		*box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 		text-align:center;
 		/* Gradient to h1 */
@@ -273,7 +280,12 @@ video {
 		transition: all 0.4s;
 	}
 	
-	#s3:hover,#s4:hover,#s5:hover{
+	#s3:hover,#s5:hover {
+		background-size:180%;
+		transition: all 0.4s;
+	}
+	
+	#s4:hover{
 		background-size:120%;
 		transition: all 0.4s;
 	}
@@ -305,7 +317,7 @@ video {
 	.section-textB h2 {
 		font-size: 1.4em;
 		font-weight:500;
-		padding: 0.3em 0 0 0;
+		padding: 4em 0 0 0;
 		color: #fff;
 	}
 
@@ -342,7 +354,7 @@ video {
 		  rgba(0, 0, 0, 0.6)
 		),
 		url(../../medias/kinesiologie/onebrain.jpg) center;
-		background-size: 100%;
+		background-size: 150%;
 	}
 
 	#s4{
@@ -365,7 +377,7 @@ video {
 		  rgba(0, 0, 0, 0.6)
 		),
 		url(../../medias/kinesiologie/energy.jpg) center;
-		background-size: 100%;
+		background-size: 150%;
 		
 	}
 /* FOOTER ../../../../../../../../../../../../../../../../../../../../../../../../*/
