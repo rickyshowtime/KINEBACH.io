@@ -111,13 +111,13 @@
             showActiveTooltip: false,
             slidesNavigation: false,
             slidesNavPosition: 'bottom',
-            scrollBar: false,
+            scrollBar: true,
             hybrid: false,
 
             //scrolling
             css3: true,
             scrollingSpeed: 700,
-            autoScrolling: false,
+            autoScrolling: true,
             fitToSection: true,
             fitToSectionDelay: 1000,
             easing: 'easeInOutCubic',

@@ -4,13 +4,30 @@ var mainbottom = $('#section0').offset().top + $('#section0').height();
 // on scroll, 
 $(window).on('scroll',function(){ "use strict";
 
+	$('.navbar-toggle').removeClass('navbar-on');
+	$('#burgerfooter').removeClass('on');
+	$('#burgerlanguage').removeClass('on');
+	
     // we round here to reduce a little workload
     var stop = Math.round($(window).scrollTop());
-
-    if (stop > mainbottom + 200) {
+		
+	
+    if (stop > mainbottom ) {
+		$(".nav-hide.past-main").animate({
+			marginLeft: '100%'
+		}, 0);
 		$('.nav-hide').addClass('past-main');
+		$('#menu').addClass('past-main');
+		$('#logo').addClass('scroll');
+		$('nav li').addClass('past-main');
+		$('nav ul ul').addClass('past-main');
+		$('nav li li').addClass('past-main');
         $('nav li a').addClass('past-main');
+		$('nav ul ul li').addClass('past-main');
         $('nav li span').addClass('past-main');
+		$('li.circle').addClass('past-main');
+		$('.nav-hide').addClass('off');
+		$('#menuburger').addClass('on');
 		$('.active').addClass('past-main');
 		$('.circle').addClass('past-main');
 		$( ".hide" ).hover(function() {
@@ -28,9 +45,22 @@ $(window).on('scroll',function(){ "use strict";
 			  
 			});
     } else {
+		$(".nav-hide.past-main").animate({
+			marginLeft: '0'
+		}, 0);
+		$('.nav-hide').removeClass('off');
+		$('#menu').removeClass('past-main');
+		$('#logo').removeClass('scroll');
+		$('.navbar-toggle').removeClass('navbar-on');
+		$('nav ul ul li').removeClass('past-main');
+		$('#menuburger').removeClass('on');
 		$('.nav-hide').removeClass('past-main');
+		$('nav li').removeClass('past-main');
+		$('nav ul ul').removeClass('past-main');
+		$('nav li li').removeClass('past-main');
         $('nav li a').removeClass('past-main');
         $('nav li span').removeClass('past-main');
+		$('li.circle').removeClass('past-main');
 		$('.active').removeClass('past-main');
 		$('.circle').removeClass('past-main');
     }
@@ -61,7 +91,7 @@ $(window).on('scroll',function(){ "use strict";
     // we round here to reduce a little workload
     var stop = Math.round($(window).scrollTop());
 
-    if (stop < mainbottom - 450) {
+    if (stop < mainbottom - 250) {
 		$( ".hide" ).hover(function() {
 			  $(".nav-hide").removeClass("roll");
 			},

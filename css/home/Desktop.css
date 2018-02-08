@@ -3,8 +3,9 @@
 html, body { height: 100%; width: 100%; margin: 0;}
 
 html {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Gudea', sans-serif;
 	box-sizing: border-box;
+
 }
 
 body{
@@ -12,22 +13,28 @@ body{
 	
 }
 
+div {
+	color: #97644F;
+	}
+
 a{
 	text-decoration: none;
 	color: inherit;
 }
 
 h1 {
-	font-family: 'Quicksand', sans-serif;
+	font-family: 'Gudea', sans-serif;
 	font-size: 32px;
 	font-weight: 300;
 	margin-bottom: 0.8em;
+	color: #97644F;
 }
 
 h2 {
 	font-size: 16px;
 	font-weight: 300;
 	margin-bottom: 0.8em;
+	color: #97644F;
 }
 
 .subtitle {
@@ -39,6 +46,7 @@ h2 {
 p {
 	font-size: 14px;
 	margin-bottom: 0.8em;
+	color: #97644F;
 }
 
 .center {
@@ -79,7 +87,114 @@ video {
 	#menuburger{
 		display:none;
 	}
+	
+	#menu {
+		position:absolute;
+		width:100%;
+	}
+		
+	#burgerfooter{
+		display:none;
+	}
+	
+	#burgerlanguage{
+		display:none;
+	}
+	
+	#burgerfooter i {
+		background:#97644F;
+		color:#fff;
+		border-radius: 50px;
+		width:40px;
+		height:30px;
+		padding-top:10px;
+		font-size: 1.5em;
+		margin-top:1%;
+		margin-right:0.3em;
+	}
+	
+	
+	#menuburger.on {
+		display:block;
+	}
+	
+	#burgerfooter.on {
+		display:block;
+		position:static;
+		padding-top: 45em;
+		padding-left: 1%;
+		font-size:10px;
+	}
+	
+	#burgerline{
+		border-top:solid 2px #97644F;
+		width:100px;
+		padding-top: 3em;
+		margin-left:25px;
+		border-top-left-radius: 0.5px;
+		border-top-right-radius: 0.5px;
+	}
+	
+	#burgerlanguage.on{
+		display:flex;
+		margin-top: -4%;
+		padding-left: 5%;
+		font-size:1.0em;
+		z-index:99;
+	}
+	
+	.section.on {
+		filter: blur(5px);
+		transition: all 0.1s ease-in;
+		transition-delay: 0.8s;
+	}
+	
+	.navbar-toggle {
+	  position: fixed;
+	  top: 3%;
+	  right: 3%;
+	  width: 45px;
+	  height: 45px;
+	  z-index: 100;
+	  cursor: pointer;
+	  transition: all 0.6s ease;
+	}
 
+	.bar1,
+	.bar2,
+	.bar3 {
+	  width: 80%;
+	  height: 5px;
+	  margin-bottom: 5px;
+	  background-color: #97644F;
+	  border-radius: 5px;
+	  transition: all 0.3s ease-in-out;
+	
+	}
+
+	.navbar-on .bar1,
+	.navbar-on .bar2,
+	.navbar-on .bar3 { 
+	background-color: #97644F; 
+	
+	}
+
+	.navbar-on .bar1 {
+	  background-color: #97644F;
+	  transform-origin: 15% 40%;
+	  padding-left:4.5px;
+	  transform: rotate(45deg);
+	}
+
+	.navbar-on .bar3 {
+	  background-color: #97644F;
+	  transform-origin: 15% 40%;
+		padding-left:4.5px;
+	  transform: rotate(-45deg);
+	}
+
+	.navbar-on .bar2 { background-color: transparent; }
+	
 	.nav-hide {
 		position:fixed;
 		width:100%;
@@ -88,10 +203,14 @@ video {
 		margin: 0 auto;
 		text-align: center;
 		list-style:none;
-		font-size: 1.3em;
+		font-size: 1.0em;
 		opacity: 0;
-        transition: opacity 1s;
 		transition: all 0.4s;
+	}
+	
+	.nav-hide.off {
+		display:none;
+		opacity:0;
 	}
 	
 	.nav-hide.roll{
@@ -102,6 +221,11 @@ video {
 	
 	.nav-hide.past-main {
 		background-color:#fff;
+		margin-left: 100%;
+		padding-top: 5.5em;
+		height:100%;
+		opacity:1;
+		transition: all 0.6s ease;
 	}
 	
 	.loaded {
@@ -109,10 +233,49 @@ video {
 	}
 	
 	nav li {
+		font-size: 1.3em;
 		display: inline-block;
 		position:relative;
 		padding: 0 6em 0 0;
 	}
+	
+	#menu {
+		margin-top: 2em;
+	}
+	
+	#menu.past-main {
+		margin-top: 5em;
+	}
+	
+	nav li.past-main {
+		display: flex;
+		position:relative;
+		height:100%;
+		padding: 0 0 1.0em 2em;
+		transition: all 0.3s;
+	}
+	
+	nav li.past-main.plus:hover {
+		display: flex;
+		position:relative;
+		height:100%;
+		padding: 0 0 5.5em 2em;
+		transition: all 0.3s;
+	}
+	
+	nav ul ul.past-main {
+		margin: 1em 0 0 0;
+	}
+	
+	
+	nav li li.past-main {
+		padding: 0.5em 0.5em 0 0;
+	}
+	
+	nav li li.past-main:hover {
+		padding: 0.5em 0.5em 0 0;
+	}
+	
 
 	nav li a {
 		color:#C8A596;
@@ -161,7 +324,7 @@ video {
 	nav ul li:hover > ul { 
 	  visibility: visible;
 	  opacity:1;
-	  padding: 12px 0;
+	  padding: 0.1em 0;
 	  transition: all 0.3s ease;
 	}
 
@@ -185,11 +348,27 @@ video {
 	
 	li.circle:before, li.circle:after {
 		position: absolute;
-		top: 55%;
+		top: 45%;
 		left: -10%;
-		width: 15px;
-		height: 15px;
-		border: 2px solid #97644F;
+		width: 0.45em;
+		height: 0.45em;
+		border: 0.1em solid #97644F;
+		transform: translateX(-50%) translateY(-50%) scale(2);
+		border-radius: 50%;
+		background: transparent;
+		content: "";
+		opacity: 0;
+		transition: all 0.3s;
+		z-index: -1;
+	}
+	
+	li.circle.past-main:before, li.circle.past-main:after {
+		position: absolute;
+		top: 0.6em;
+		left: 1em;
+		width: 0.45em;
+		height: 0.45em;
+		border: 0.1em solid #97644F;
 		transform: translateX(-50%) translateY(-50%) scale(2);
 		border-radius: 50%;
 		background: transparent;
@@ -208,7 +387,7 @@ video {
 	li.circle:hover:before
 	{
 		opacity: 1;
-		transform: translateX(-50%) translateY(-50%) scale(1);
+		transform: translateX(-50%) translateY(-50%) scale(0.8);
 	}
 
 	li.circle:hover:after
@@ -226,8 +405,29 @@ video {
 		margin: auto;
 		padding-top: 5%;
 		width:15%;
+		transition: all 0.5s;
+	}
+	
+	#logo a {
+	  pointer-events: none;
+	  cursor: default;
+	}
+	
+	#logo.scroll img {
+		position: fixed;
+		z-index:99;
+		top:2%;
+		left: 2%;
+		padding-top: 0;
+		width:5%;
+		transition: all 0.3s ease;
 	}
 
+	#logo.scroll a {
+	  pointer-events: auto;
+	  cursor: pointer;
+	}
+	
 	/* Title */
 	#title {
 		margin: auto;
@@ -262,18 +462,126 @@ video {
         transition: opacity 1s;
 	}
 	
+	#pourquoi {
+		position:absolute;
+		margin: 25% 0;
+		text-align: center;
+		width:100%;
+		font-weight: 700;
+		font-size: 3em;
+	}
+	
+	#section2 .fp-tableCell {
+    display: table-cell;
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+	}
+	
+	.timeBlock {
+		width: 100%;
+		margin: 10% auto 0 auto;
+		text-align:center
+	}
+	
+	#timeDiv {
+		font-size: 15px;
+		text-transform: uppercase;
+		max-width: 325px;
+		margin: auto;
+		background: #fff;	
+		border-radius: 3px;
+		box-shadow: 0 8px 16px -8px;
+		padding: 20px 5px;
+	}
+
+	.timeopen {
+	  color: #27ae60;
+	  border: 2px solid #27ae60;
+	}
+	
+	.timeclosed {
+	  color: rgba(231, 76, 60, 0.85);
+	  border: 2px solid rgba(231, 76, 60, 0.8);
+	}
+	
+
+	#modal-state {
+		display:none;
+	}
+	
+
+	#modal-state:checked + .modal-overlay {
+	  opacity: 1;
+	  animation: fade-in .4s;
+	  display: block;
+	}
+	
+	.modal-overlay {
+		position: flex;
+		float:center;
+	  	width: 40%;
+		height:25em;
+		margin: 0 auto;
+		text-align:center;
+		background: #fff;
+		box-shadow: 0 8px 16px -8px;		
+	}
+	
+	#timeTitle {
+		padding: 5% 0 2% 0;
+	}
+	
+	.dateTime {
+	  max-width: 320px;
+	  margin: 0 auto;
+	  padding: 1% 0;
+	}
+
+	.day {
+	  display: inline-block;
+	  float: left;
+	}
+
+	.time {
+	  display: inline-block;
+	  float: right
+	}
+	
+	.today {
+	  color: rgb(200, 85, 39);
+	  font-weight: 600;
+	}	
+	
+	#rdv {
+		position:absolute;
+		color: #fff;
+		font-style: italic;
+		margin-top: 10px;
+		width:100%
+	}
+	
+	#rdv p {
+		font-size:1.2em;
+		text-align: center;
+		margin:0.5em;
+	}
+	
 	.loaded{
 		opacity:1;
 	}
 	
+	#quoi{padding-top: 15%;}
+	
 	.quoi{
 		font-size: 24px;
 		padding: 0 20%;
+		text-align:justify;
 	}
 	
 	article {
 	margin: 0 auto 0 auto;
-	padding:11% 0;
+	padding:5% 0;
 	}
 
 	#ArticleTitle {
@@ -293,20 +601,25 @@ video {
 	.sectionB {
 		background-color: #e3e3e3;
 		min-width: 200px;
-		width: 31.35%;
-		height: 250px;
+		height: 16em;
 		*box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 		text-align:center;
+		margin: 0.5%;
 		/* Gradient to h1 */
 
 	}
 	
-	#s1:hover,#s2:hover{
+	#s1:hover, #s5:hover{
+		background-size:120%;
+		transition: all 0.4s;
+	}
+	
+	#s2:hover{
 		background-size:140%;
 		transition: all 0.4s;
 	}
 	
-	#s3:hover,#s4:hover,#s5:hover{
+	#s3:hover,#s4:hover{
 		background-size:120%;
 		transition: all 0.4s;
 	}
@@ -319,9 +632,11 @@ video {
 		transition: all 0.4s;
 	}
 
-
-	#s4, #s5 {
-		width: 47%;
+	#s1 {
+		width: 97%;
+	}
+	#s2, #s3, #s4, #s5 {
+		width: 48%;
 	}
 
 	.alink {
@@ -340,9 +655,9 @@ video {
 	}
 
 	.section-textB h2 {
-		font-size: 1.5em;
+		font-size: 2.0em;
 		font-weight:500;
-		margin: 110px 10px;
+		margin: 100px 10px;
 		color: #fff;
 	}
 
@@ -354,8 +669,8 @@ video {
 		  rgba(0, 0, 0, 0.6)
 		),
 		url(../../medias/kinesiologie/touchforhealth.jpg);
-		background-size: 120%;
-		background-position: center
+		background-size: 100%;
+		background-position: center 40%;
 	}
 
 
@@ -405,6 +720,7 @@ video {
 		background-size: 100%;
 		
 	}
+	
 
 /* FOOTER ../../../../../../../../../../../../../../../../../../../../../../../../*/
 }

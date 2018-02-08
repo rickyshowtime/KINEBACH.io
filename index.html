@@ -13,8 +13,12 @@
 
 <!-- GOOGLE FONTS -->
 <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Quicksand:300,400,500,700" rel="stylesheet">
-  
+<link href="https://fonts.googleapis.com/css?family=Gudea" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+
+
 <!-- FONTAWESOME -->
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 <!-- <link rel="stylesheet" href="img/font-awesome/css/font-awesome.min.css"> -->
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -56,9 +60,10 @@
 	
 
 	<nav class="nav-hide">
-       <ul>
+	   <div id="burgerlanguage">FR | EN | ES</div>
+       <ul id="menu">
 		  <li class="circle"><a href="./index.html"><span class="active">ACCEUIL</span></a></li>
-          <li class="circle">
+          <li class="circle plus">
 			  <label for="drop-1"  class="toggle">LA KINÉSIOLOGIE</label>
 			  <a class="hide" href="./kinesiology.html"><span>LA KINÉSIOLOGIE</span></a>
 			  <input type="checkbox" class="checkbox" onclick="setdrop2(false)" id="drop-1"/>
@@ -70,7 +75,7 @@
 		  </li>
           <li class="circle"><a href="#"><span>LA SCÉANCE</span></a></li>
           <li class="circle"><a href="#"><span>TARIFS</span></a></li>
-          <li class="circle">
+          <li class="circle plus">
 			  <label for="drop-2"  class="toggle">INFORMATIONS</label>
 			  <a class="hide" href="#"><span>INFORMATIONS</span></a>
 			  <input type="checkbox" class="checkbox" onclick="setdrop1(false)" id="drop-2"/>
@@ -81,6 +86,16 @@
 			  </ul>
 		  </li>
         </ul>
+		<div id="burgerfooter">
+			<ul id="burgerfooterlist">
+			<div id="burgerline"></div>
+			<li>Veronica Sudry</li>
+			<li>Kinésiologue agrée ASCA</li>
+			<li>Rue d'Italie 27 | 1800 Vevey</li>
+			<li>Tél: 076 296 66 77 | Email: verosudry@hotmail.com</li>
+			<li><i class="fab fa-facebook-f" data-fa-mask="fas fa-circle"></i><i class="fab fa-youtube"></i><i class="fab fa-whatsapp"></i><i class="fas fa-envelope"></i></li>
+			</ul>
+		</div>
     </nav>
 
 
@@ -92,7 +107,7 @@
 <div id="fullpage" class="navbar-background">
 <div class="section active" id="section0">
 	<!-- logo... -->
-	<div id="logo"><img src="./medias/site-assets/Logo.png"></div>
+	<div id="logo"><a href="./index.html#firstPage"><img src="./medias/site-assets/Logo.png"></a></div>
 	<!-- title... -->
 	<h1 id="title">KINÉ & BACH</h1>
 	<h2 id="name">Véronica Sudry</h2>
@@ -103,12 +118,62 @@
 </div>
 
     <div class="section " id="section1">
-        <h1></h1>
-        <p></p>
+		<h1 id="pourquoi">POURQUOI CONSULTER ?</h1>
+		<div id="holder"></div>
     </div>
     <div class="section " id="section2">
-
-    </div>
+            <h1 id="horaires" ></h1>
+			<div class="timeBlock">
+            <div id="timeDiv"></div>
+			  <label class="viewOpen" for="modal-state">View Hours&nbsp;&nbsp;<i class="fa fa-clock-o"></i></label>
+			  <input type="checkbox" name="modal-state" id="modal-state">
+			  <div class="modal-overlay">
+				<label for="modal-state" class="modal-overlay-close"></label>
+				<div class="horaires">
+				  <label class="button-close" for="modal-state"><i class="fas fa-times-circle"></i></label>
+				  <h3 id="timeTitle">We're Open At These Times</h3>
+				  <div id="Wednesday" class="dateTime">
+					<div class="day">Wednesday</div>
+					<div class="time">4pm - 12am</div>
+				  </div>
+				  <br>
+				  <div id="Thursday" class="dateTime">
+					<div class="day">Thursday</div>
+					<div class="time">4pm - 12am</div>
+				  </div>
+				  <br>
+				  <div id="Friday" class="dateTime">
+					<div class="day">Friday</div>
+					<div class="time">4pm - 12am</div>
+				  </div>
+				  <br>
+				  <div id="Saturday" class="dateTime">
+					<div class="day">Saturday</div>
+					<div class="time">1pm - 12am</div>
+				  </div>
+				  <br>
+				  <div id="Sunday" class="dateTime">
+					<div class="day">Sunday</div>
+					<div class="time">1pm - 12am</div>
+				  </div>
+				  <br>
+				  <div id="Monday" class="dateTime">
+					<div class="day">Monday</div>
+					<div class="time">Closed</div>
+				  </div>
+				  <br>
+				  <div id="Tuesday" class="dateTime">
+					<div class="day">Tuesday</div>
+					<div class="time">Closed</div>
+				  </div>
+			    </div>
+			  </div>
+			  </div>
+		<div id="rdv">
+			 <p>Joignable tous les jours.</p>
+			 <p>Consultations sur RDV</p>
+			 </div>
+		</div>
     <div class="section" id="section3">
         <div class="intro">
             <h1></h1>
@@ -123,6 +188,7 @@
 </body>
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/burgermenu.js"></script>
+<script src="js/time.js"></script>
 <script src="js/desktopmenu.js"></script>
 <script>
 if (window.matchMedia("(max-width: 900px)").matches) {
@@ -136,14 +202,191 @@ if (window.matchMedia("(max-width: 900px)").matches) {
 	});
 }
 </script>
-<script type="text/javascript" media="screen and (max-width: 900px)" src="js/jquery.fullPage.js"></script>
-<script media="screen and (max-width: 900px)" type="text/javascript">
+<script>
+if (window.matchMedia("(min-width: 900px)").matches) {
+	$(function(){
+	  $('.navbar-toggle').click(function(){
+		$('.navbar-toggle').toggleClass('navbar-on');
+		 $('.section').toggleClass('on');
+		var targetValue;
+		  if ($('.nav-hide.past-main').css('margin-left') == "100%") {
+			targetValue = '72%';
+		  } else {
+			targetValue = '100%';
+		  }
+		  $(".nav-hide.past-main").animate({
+			marginLeft: targetValue
+		}, 300);
+		$('.nav-hide').toggleClass('off');
+		$('#burgerfooter').toggleClass('on');
+		$('#burgerlanguage').toggleClass('on');
+	  });
+	});
+}
+</script>
+<script type="text/javascript"  src="js/jquery.fullPage.js"></script>
+<script  type="text/javascript">
         $(document).ready(function() {
             $('#fullpage').fullpage({
-              sectionsColor: ['', '#C8A596', '#EAE0DB', '#C8A596', '#EAE0DB'],
+              sectionsColor: ['', '#F4EFED', '#F4EFED', '#F4EFED', '#F4EFED'],
               anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
               menu: '#menu',
             });
         });
 </script>
+<script src="js/jquery.svg3dtagcloud.min.js"></script>
+<script>
+if (window.matchMedia("(min-width: 900px)").matches) {
+    	$( document ).ready( function() {
+
+            var entries = [ 
+                
+                { label: 'trouble alimentaire', url: '#secondPage', target: '_top' },
+                { label: 'phobie', url: '#secondPage', target: '_top' },
+                { label: 'mauvaise habitude', url: '#secondPage', target: '_top' },
+                { label: 'manque d\'amour', url: '#secondPage', target: '_top' },
+                { label: 'stress', url: '#secondPage', target: '_top' },
+                { label: 'manque de confiance', url: '#secondPage', target: '_top' },
+                { label: 'peur de prendre parole en public', url: '#secondPage', target: '_top' },
+                { label: 'rupture sentimentale', url: '#secondPage', target: '_top' },
+                { label: 'souffrance suite a un deuil', url: '#secondPage', target: '_top' },
+                { label: 'manque d\'organisation', url: '#secondPage', target: '_top' },
+                { label: 'dépression', url: '#secondPage', target: '_top' },
+                { label: 'incertitudes professionelles', url: '#secondPage', target: '_top' },
+                { label: 'troubles alimnetaires', url: '#secondPage', target: '_top' },
+                { label: 'bloquage', url: '#secondPage', target: '_top' },
+                { label: 'tensions conjugale', url: '#secondPage', target: '_top' },
+                { label: 'difficulté à se concentrer', url: '#secondPage', target: '_top' },
+                { label: 'mal-être', url: '#secondPage', target: '_top' },
+                { label: 'solitude', url: '#secondPage', target: '_top' },
+                { label: 'insosciable', url: '#secondPage', target: '_top' },
+                { label: 'peur de la mort', url: '#secondPage', target: '_top' },
+                { label: 'anxiété', url: '#secondPage', target: '_top' },
+                { label: 'addiction', url: '#secondPage', target: '_top' },
+                { label: 'difficulté d\'apprentissage', url: '#secondPage', target: '_top' },
+                { label: 'peur d\'être parent', url: '#secondPage', target: '_top' },
+                { label: 'insomnie', url: '#secondPage', target: '_top' },
+                { label: 'sentiment de fragilité', url: '#secondPage', target: '_top' },
+                { label: 'troubles comportementaux', url: '#secondPage', target: '_top' },
+                { label: 'phobie', url: '#secondPage', target: '_top' },
+
+            ];
+
+            var settings = {
+
+                entries: entries,
+                width: '150%',
+                height: '100%',
+                radius: '65%',
+                radiusMin: 75,
+                bgDraw: true,
+                bgColor: 'transparent',
+                opacityOver: 1.00,
+                opacityOut: 0.05,
+                opacitySpeed: 12,
+                fov: 800,
+                speed: 0.3,
+                fontFamily: 'Oswald, Arial, sans-serif',
+                fontSize: '1.2em',
+                fontColor: '#fff',
+                fontWeight: 'normal',//bold
+                fontStyle: 'normal',//italic 
+                fontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                fontToUpperCase: true,
+                tooltipFontFamily: 'Oswald, Arial, sans-serif',
+                tooltipFontSize: '11',
+                tooltipFontColor: '#fff',
+                tooltipFontWeight: 'normal',//bold
+                tooltipFontStyle: 'normal',//italic 
+                tooltipFontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                tooltipFontToUpperCase: false,
+                tooltipTextAnchor: 'left',
+                tooltipDiffX: 0,
+                tooltipDiffY: 10
+
+            };
+
+            //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+            $( '#holder' ).svg3DTagCloud( settings );
+
+		} );
+    }    
+    </script>
+	<script>
+if (window.matchMedia("(max-width: 900px)").matches) {
+    	$( document ).ready( function() {
+
+            var entries = [ 
+                
+                { label: 'trouble alimentaire', url: '#secondPage', target: '_top' },
+                { label: 'phobie', url: '#secondPage', target: '_top' },
+                { label: 'mauvaise habitude', url: '#secondPage', target: '_top' },
+                { label: 'manque d\'amour', url: '#secondPage', target: '_top' },
+                { label: 'stress', url: '#secondPage', target: '_top' },
+                { label: 'manque de confiance', url: '#secondPage', target: '_top' },
+                { label: 'peur de prendre parole en public', url: '#secondPage', target: '_top' },
+                { label: 'rupture sentimentale', url: '#secondPage', target: '_top' },
+                { label: 'souffrance suite a un deuil', url: '#secondPage', target: '_top' },
+                { label: 'manque d\'organisation', url: '#secondPage', target: '_top' },
+                { label: 'dépression', url: '#secondPage', target: '_top' },
+                { label: 'incertitudes professionelles', url: '#secondPage', target: '_top' },
+                { label: 'troubles alimentaires', url: '#secondPage', target: '_top' },
+                { label: 'bloquage', url: '#secondPage', target: '_top' },
+                { label: 'tensions conjugale', url: '#secondPage', target: '_top' },
+                { label: 'difficulté à se concentrer', url: '#secondPage', target: '_top' },
+                { label: 'mal-être', url: '#secondPage', target: '_top' },
+                { label: 'solitude', url: '#secondPage', target: '_top' },
+                { label: 'insosciable', url: '#secondPage', target: '_top' },
+                { label: 'peur de la mort', url: '#secondPage', target: '_top' },
+                { label: 'anxiété', url: '#secondPage', target: '_top' },
+                { label: 'addiction', url: '#secondPage', target: '_top' },
+                { label: 'difficulté d\'apprentissage', url: '#secondPage', target: '_top' },
+                { label: 'peur d\'être parent', url: '#secondPage', target: '_top' },
+                { label: 'insomnie', url: '#secondPage', target: '_top' },
+                { label: 'sentiment de fragilité', url: '#secondPage', target: '_top' },
+                { label: 'troubles comportementaux', url: '#secondPage', target: '_top' },
+                { label: 'phobie', url: '#secondPage', target: '_top' },
+
+            ];
+
+            var settings = {
+
+                entries: entries,
+                width: '100%',
+                height: '100%',
+                radius: '80%',
+                radiusMin: 80,
+                bgDraw: true,
+                bgColor: 'transparent',
+                opacityOver: 1.00,
+                opacityOut: 0.05,
+                opacitySpeed: 12,
+                fov: 800,
+                speed: 0.4,
+                fontFamily: 'Oswald, Arial, sans-serif',
+                fontSize: '1.0em',
+                fontColor: '#fff',
+                fontWeight: 'normal',//bold
+                fontStyle: 'normal',//italic 
+                fontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                fontToUpperCase: true,
+                tooltipFontFamily: 'Oswald, Arial, sans-serif',
+                tooltipFontSize: '11',
+                tooltipFontColor: '#fff',
+                tooltipFontWeight: 'normal',//bold
+                tooltipFontStyle: 'normal',//italic 
+                tooltipFontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                tooltipFontToUpperCase: false,
+                tooltipTextAnchor: 'left',
+                tooltipDiffX: 0,
+                tooltipDiffY: 10
+
+            };
+
+            //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+            $( '#holder' ).svg3DTagCloud( settings );
+
+		} );
+    }    
+    </script>
 </html>
