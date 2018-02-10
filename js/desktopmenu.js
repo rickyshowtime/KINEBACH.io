@@ -7,6 +7,7 @@ $(window).on('scroll',function(){ "use strict";
 	$('.navbar-toggle').removeClass('navbar-on');
 	$('#burgerfooter').removeClass('on');
 	$('#burgerlanguage').removeClass('on');
+	$('.section').removeClass('on');
 	
     // we round here to reduce a little workload
     var stop = Math.round($(window).scrollTop());
@@ -91,21 +92,23 @@ $(window).on('scroll',function(){ "use strict";
     // we round here to reduce a little workload
     var stop = Math.round($(window).scrollTop());
 
-    if (stop < mainbottom - 250) {
-		$( ".hide" ).hover(function() {
-			  $(".nav-hide").removeClass("roll");
-			},
-			  function() {
-			  $(".nav-hide").removeClass("roll");
-			  
-			});
-		$( "nav ul ul" ).hover(function() {
-			  $(".nav-hide").removeClass("roll");
-			},
-			  function() {
-			  $(".nav-hide").removeClass("roll");
-			  
-			});
+    if (stop > mainbottom +7000) {
+			
+		window.scrollTo(0, 5500);	
+
     } 
 
+});
+
+$('#check1').click(function() {"use strict";
+   if($(this).is(':checked')) {
+       $('html,body').animate({
+			scrollTop: $("#footer").offset().top},
+			'slow');
+   }
+   else {
+       $('html,body').animate({
+			scrollTop: $("#map").offset().top},
+			'slow');
+   }
 });

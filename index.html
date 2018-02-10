@@ -1,54 +1,55 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>KINEBACH</title>
 
-<!-- CSS RESET -->
-<!-- <link rel="stylesheet" type="text/css" href="css/reset.css"> -->
+	<meta charset="utf-8">
+	<title>KINEBACH</title>
 
-<link href="css/home/Desktop.css" rel="stylesheet" type="text/css">
-<link href="css/home/Mobile.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
+	<!-- CSS RESET -->
+	<!-- <link rel="stylesheet" type="text/css" href="css/reset.css"> -->
 
-<!-- GOOGLE FONTS -->
-<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Quicksand:300,400,500,700" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Gudea" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+	<link href="css/home/Desktop.css" rel="stylesheet" type="text/css">
+	<link href="css/home/Mobile.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
 
-
-<!-- FONTAWESOME -->
-<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-<!-- <link rel="stylesheet" href="img/font-awesome/css/font-awesome.min.css"> -->
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
- 
-<title>KINÉ & BACH</title>
-<meta name="apple-mobile-web-app-status-bar-style" content="#C8A596" />
-<meta name="theme-color" content="#C8A596" />
-<meta property="og:site_name" content="KINEBACH.io">
-<meta property="og:title" content="KINÉ & BACH" />
-<meta property="og:description" content="Kinésiologue" />
-<meta property="og:image" itemprop="image" content="https://rickyshowtime.github.io/KINEBACH.io/medias/site-assets/Logo.png">
-<meta property="og:type" content="website" />
-<link rel="icon" href="./medias/site-assets/favicon.ico">
-<link rel="apple-touch-startup-image" href="https://rickyshowtime.github.io/KINEBACH.io/medias/site-assets/Logo.png" />
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Quicksand:300,400,500,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Gudea" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
 
 
-  
+	<!-- FONTAWESOME -->
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+	<!-- <link rel="stylesheet" href="img/font-awesome/css/font-awesome.min.css"> -->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	 
+	<title>KINÉ & BACH</title>
+	<meta name="apple-mobile-web-app-status-bar-style" content="#C8A596" />
+	<meta name="theme-color" content="#C8A596" />
+	<meta property="og:site_name" content="KINEBACH.io">
+	<meta property="og:title" content="KINÉ & BACH" />
+	<meta property="og:description" content="Kinésiologue" />
+	<meta property="og:image" itemprop="image" content="https://rickyshowtime.github.io/KINEBACH.io/medias/site-assets/Logo.png">
+	<meta property="og:type" content="website" />
+	<link rel="icon" href="./medias/site-assets/favicon.ico">
+	<link rel="apple-touch-startup-image" href="https://rickyshowtime.github.io/KINEBACH.io/medias/site-assets/Logo.png" />
+
 </head>
 
 <body>
 
+<!-- background video -->
 <video class="navbar-background" poster="medias/site-assets/wallpaper.jpg" id="bgvid" playsinline autoplay muted loop>
 <source src="medias/site-assets/KINEBACHBG.mp4" type="video/mp4">
 </video>
 
-<!-- The Header -->
 <header>
-	<!-- navigation... -->
+<!-- The Header -->
+
+	<!-- menu toogle (menuburger) -->
 	 <div id="menuburger">
 		<div class="navbar-toggle" onclick="setdrop1(false); setdrop2(false)">
 		  <div class="bar1"></div>
@@ -58,9 +59,11 @@
 		
   	</div>
 	
-
+	<!-- navigation mobile/desktop  -->
 	<nav class="nav-hide">
+	
 	   <div id="burgerlanguage">FR | EN | ES</div>
+	   
        <ul id="menu">
 		  <li class="circle"><a href="./index.html"><span class="active">ACCEUIL</span></a></li>
           <li class="circle plus">
@@ -72,6 +75,7 @@
 				<li><a href="./kinesiology.html#secondPage">Techniques</a></li>
 				<li><a href="#">Techniques Complémentaires</a></li>
 			  </ul>
+			  
 		  </li>
           <li class="circle"><a href="#"><span>LA SCÉANCE</span></a></li>
           <li class="circle"><a href="#"><span>TARIFS</span></a></li>
@@ -86,6 +90,7 @@
 			  </ul>
 		  </li>
         </ul>
+		
 		<div id="burgerfooter">
 			<ul id="burgerfooterlist">
 			<div id="burgerline"></div>
@@ -93,9 +98,15 @@
 			<li>Kinésiologue agrée ASCA</li>
 			<li>Rue d'Italie 27 | 1800 Vevey</li>
 			<li>Tél: 076 296 66 77 | Email: verosudry@hotmail.com</li>
-			<li><i class="fab fa-facebook-f" data-fa-mask="fas fa-circle"></i><i class="fab fa-youtube"></i><i class="fab fa-whatsapp"></i><i class="fas fa-envelope"></i></li>
+			<li id="burgericon">
+				<div><i class="fab fa-facebook-f"></i></div>
+				<div><i class="fab fa-youtube"></i></div>
+				<div><i class="fab fa-whatsapp"></i></div>
+				<div><i class="fas fa-envelope"></i></div>
+			</li>
 			</ul>
 		</div>
+		
     </nav>
 
 
@@ -103,25 +114,42 @@
 	
 
 </header>
+<main>
 <!-- Main content -->
 <div id="fullpage" class="navbar-background">
-<div class="section active" id="section0">
-	<!-- logo... -->
-	<div id="logo"><a href="./index.html#firstPage"><img src="./medias/site-assets/Logo.png"></a></div>
-	<!-- title... -->
-	<h1 id="title">KINÉ & BACH</h1>
-	<h2 id="name">Véronica Sudry</h2>
-	<!-- citation... -->	
-	<div id="citation">
-	<p>"Peu importe qui vous êtes ou qui vous avez été, vous pouvez être qui vous voulez" - W. Clement Stone</p>
-	</div>
-</div>
 
-    <div class="section " id="section1">
+	<!-- Homepage (Section 0)-->
+	<div class="section active" id="section0">
+
+		<div id="logo"><a href="./index.html#firstPage"><img src="./medias/site-assets/Logo.png"></a></div>
+		
+		<h1 id="title">KINÉ & BACH</h1>
+		<h2 id="name">Véronica Sudry</h2>
+			
+		<div id="citation">
+		<p>"Peu importe qui vous êtes ou qui vous avez été, vous pouvez être qui vous voulez" - W. Clement Stone</p>
+		</div>
+		
+	</div>
+	
+	<!-- Qu'est ce que c'est (Section 1)-->
+	<div class="section " id="section1">
+		<h1 id="intro">Qu'est ce que c'est ?</h1>
+    </div>
+	
+	<!-- Pourquoi (Section 2)-->
+    <div class="section " id="section2">
 		<h1 id="pourquoi">POURQUOI CONSULTER ?</h1>
 		<div id="holder"></div>
     </div>
-    <div class="section " id="section2">
+	
+	<!-- Tarifs (Section 3)-->
+		<div class="section " id="section3">
+		<h1>TARIFS</h1>
+    </div>
+	
+	<!-- Horaires (Section 4)-->
+    <div class="section " id="section4">
             <h1 id="horaires" ></h1>
 			<div class="timeBlock">
             <div id="timeDiv"></div>
@@ -173,220 +201,348 @@
 			 <p>Joignable tous les jours.</p>
 			 <p>Consultations sur RDV</p>
 			 </div>
+	</div>
+	
+	<!-- Map (Section 5)-->
+	<div class="section"  id="section5">
+	
+		<div id="mapwrapper">
+			<div id="map"></div>
+			<div id="maplinks">
+				<i class="fas fa-bus"></i>
+				<i class="fas fa-train"></i>
+			</div>			
 		</div>
-    <div class="section" id="section3">
-        <div class="intro">
-            <h1></h1>
-            <p></p>
-        </div>
-    </div>
+	
+		<div id="footer">
+			<div id="footercontent">		
+				<div id="infofooter">
+					<ul id="infofooterlist">
+					<li id="infoname">Veronica Sudry, Kinésiologue agrée ASCA</li>
+					<li id="infospace"><i class="fas fa-map-marker-alt footericon"></i>Rue d'Italie 27 | 1800 Vevey | Au 1er étage (sans ascenceur)</li>
+					<li><i class="fas fa-phone footericon"></i>Tél: 076 296 66 77</li>
+					<li><i class="fas fa-at footericon"></i>Email: verosudry@hotmail.com</li>
+					<li id="footersocial">
+						<div><i class="fab fa-facebook-f"></i></div>
+						<div><i class="fab fa-youtube"></i></div>
+						<div><i class="fab fa-whatsapp"></i></div>
+						<div><i class="fas fa-envelope"></i></div>
+					</li>
+					</ul>
+				</div>
+				
+				<div id="hourfooter">
+					<label class="viewhour" for="check1">View Hours</label>
+					<input type="checkbox" name="check1" id="check1" />
+				</div>
+				
+				<div id="contactfooter">
+				<ul>
+					<form action="#" method="post">
+
+						<li><input type="text" name="email" placeholder="Email" /></li>
+						<li><textarea name="message" placeholder="Message"></textarea></li>
+						<li><button>Send</button></li>
+					</form>
+				</ul>
+				</div>
+			
+			</div>
+	
+    	</div>
+	</div>
 </div>
-<!-- footer... -->
+</main>
 
+<footer>
+	<!-- footer content -->
 
+</footer>	
 
 </body>
+
+<!-- script -->
 <script src="js/jquery-3.1.1.min.js"></script>
-<script src="js/burgermenu.js"></script>
-<script src="js/time.js"></script>
-<script src="js/desktopmenu.js"></script>
-<script>
-if (window.matchMedia("(max-width: 900px)").matches) {
-	$(function(){
-	  $('.navbar-toggle').click(function(){
-		$('.navbar-toggle').toggleClass('navbar-on');
-		$('.navbar-background').toggleClass('navbar-on')
-		$('nav').fadeToggle();
-		$('nav').removeClass('nav-hide');
-	  });
-	});
-}
-</script>
-<script>
-if (window.matchMedia("(min-width: 900px)").matches) {
-	$(function(){
-	  $('.navbar-toggle').click(function(){
-		$('.navbar-toggle').toggleClass('navbar-on');
-		 $('.section').toggleClass('on');
-		var targetValue;
-		  if ($('.nav-hide.past-main').css('margin-left') == "100%") {
-			targetValue = '72%';
-		  } else {
-			targetValue = '100%';
-		  }
-		  $(".nav-hide.past-main").animate({
-			marginLeft: targetValue
-		}, 300);
-		$('.nav-hide').toggleClass('off');
-		$('#burgerfooter').toggleClass('on');
-		$('#burgerlanguage').toggleClass('on');
-	  });
-	});
-}
-</script>
-<script type="text/javascript"  src="js/jquery.fullPage.js"></script>
-<script  type="text/javascript">
-        $(document).ready(function() {
-            $('#fullpage').fullpage({
-              sectionsColor: ['', '#F4EFED', '#F4EFED', '#F4EFED', '#F4EFED'],
-              anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
-              menu: '#menu',
-            });
-        });
-</script>
-<script src="js/jquery.svg3dtagcloud.min.js"></script>
-<script>
-if (window.matchMedia("(min-width: 900px)").matches) {
-    	$( document ).ready( function() {
+	
+	<!-- burgermenu -->
+	<script src="js/burgermenu.js"></script>
+	<script src="js/desktopmenu.js"></script>
+			
+		<!-- mobile -->
+		<script>
+		if (window.matchMedia("(max-width: 900px)").matches) {
+			$(function(){
+			  $('.navbar-toggle').click(function(){
+				$('.navbar-toggle').toggleClass('navbar-on');
+				$('.navbar-background').toggleClass('navbar-on')
+				$('nav').fadeToggle();
+				$('nav').removeClass('nav-hide');
+			  });
+			});
+		}
+		</script>
+		
+		<!-- dekstop -->
+		<script>
+		if (window.matchMedia("(min-width: 900px)").matches) {
+			$(function(){
+			  $('.navbar-toggle').click(function(){
+				$('.navbar-toggle').toggleClass('navbar-on');
+				 $('.section').toggleClass('on');
+				var targetValue;
+				  if ($('.nav-hide.past-main').css('margin-left') == "100%") {
+					targetValue = '72%';
+				  } else {
+					targetValue = '100%';
+				  }
+				  $(".nav-hide.past-main").animate({
+					marginLeft: targetValue
+				}, 300);
+				$('.nav-hide').toggleClass('off');
+				$('#burgerfooter').toggleClass('on');
+				$('#burgerlanguage').toggleClass('on');
+			  });
+			});
+		}
+		</script>
+		
+	<!-- section format and auto-scroll -->
+	<script type="text/javascript"  src="js/jquery.fullPage.js"></script>
+	<script  type="text/javascript">
+			$(document).ready(function() {
+				$('#fullpage').fullpage({
+				  sectionsColor: ['', '#F4EFED', '#F4EFED', '#F4EFED', '#F4EFED', '#F4EFED'],
+				  anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', '5thpage', 'lastpage'],
+				  menu: '#menu',
+				});
+			});
+	</script>
+	
+	<!-- section 1 - words cloud -->
+	<script src="js/jquery.svg3dtagcloud.min.js"></script>
+	
+		<!-- mobile -->
+		<script>
+		if (window.matchMedia("(max-width: 900px)").matches) {
+			$( document ).ready( function() {
 
-            var entries = [ 
-                
-                { label: 'trouble alimentaire', url: '#secondPage', target: '_top' },
-                { label: 'phobie', url: '#secondPage', target: '_top' },
-                { label: 'mauvaise habitude', url: '#secondPage', target: '_top' },
-                { label: 'manque d\'amour', url: '#secondPage', target: '_top' },
-                { label: 'stress', url: '#secondPage', target: '_top' },
-                { label: 'manque de confiance', url: '#secondPage', target: '_top' },
-                { label: 'peur de prendre parole en public', url: '#secondPage', target: '_top' },
-                { label: 'rupture sentimentale', url: '#secondPage', target: '_top' },
-                { label: 'souffrance suite a un deuil', url: '#secondPage', target: '_top' },
-                { label: 'manque d\'organisation', url: '#secondPage', target: '_top' },
-                { label: 'dépression', url: '#secondPage', target: '_top' },
-                { label: 'incertitudes professionelles', url: '#secondPage', target: '_top' },
-                { label: 'troubles alimnetaires', url: '#secondPage', target: '_top' },
-                { label: 'bloquage', url: '#secondPage', target: '_top' },
-                { label: 'tensions conjugale', url: '#secondPage', target: '_top' },
-                { label: 'difficulté à se concentrer', url: '#secondPage', target: '_top' },
-                { label: 'mal-être', url: '#secondPage', target: '_top' },
-                { label: 'solitude', url: '#secondPage', target: '_top' },
-                { label: 'insosciable', url: '#secondPage', target: '_top' },
-                { label: 'peur de la mort', url: '#secondPage', target: '_top' },
-                { label: 'anxiété', url: '#secondPage', target: '_top' },
-                { label: 'addiction', url: '#secondPage', target: '_top' },
-                { label: 'difficulté d\'apprentissage', url: '#secondPage', target: '_top' },
-                { label: 'peur d\'être parent', url: '#secondPage', target: '_top' },
-                { label: 'insomnie', url: '#secondPage', target: '_top' },
-                { label: 'sentiment de fragilité', url: '#secondPage', target: '_top' },
-                { label: 'troubles comportementaux', url: '#secondPage', target: '_top' },
-                { label: 'phobie', url: '#secondPage', target: '_top' },
+				var entries = [ 
+					
+					{ label: 'trouble alimentaire', url: '#secondPage', target: '_top' },
+					{ label: 'phobie', url: '#secondPage', target: '_top' },
+					{ label: 'mauvaise habitude', url: '#secondPage', target: '_top' },
+					{ label: 'manque d\'amour', url: '#secondPage', target: '_top' },
+					{ label: 'stress', url: '#secondPage', target: '_top' },
+					{ label: 'manque de confiance', url: '#secondPage', target: '_top' },
+					{ label: 'peur de prendre parole en public', url: '#secondPage', target: '_top' },
+					{ label: 'rupture sentimentale', url: '#secondPage', target: '_top' },
+					{ label: 'souffrance suite a un deuil', url: '#secondPage', target: '_top' },
+					{ label: 'manque d\'organisation', url: '#secondPage', target: '_top' },
+					{ label: 'dépression', url: '#secondPage', target: '_top' },
+					{ label: 'incertitudes professionelles', url: '#secondPage', target: '_top' },
+					{ label: 'troubles alimentaires', url: '#secondPage', target: '_top' },
+					{ label: 'bloquage', url: '#secondPage', target: '_top' },
+					{ label: 'tensions conjugale', url: '#secondPage', target: '_top' },
+					{ label: 'difficulté à se concentrer', url: '#secondPage', target: '_top' },
+					{ label: 'mal-être', url: '#secondPage', target: '_top' },
+					{ label: 'solitude', url: '#secondPage', target: '_top' },
+					{ label: 'insosciable', url: '#secondPage', target: '_top' },
+					{ label: 'peur de la mort', url: '#secondPage', target: '_top' },
+					{ label: 'anxiété', url: '#secondPage', target: '_top' },
+					{ label: 'addiction', url: '#secondPage', target: '_top' },
+					{ label: 'difficulté d\'apprentissage', url: '#secondPage', target: '_top' },
+					{ label: 'peur d\'être parent', url: '#secondPage', target: '_top' },
+					{ label: 'insomnie', url: '#secondPage', target: '_top' },
+					{ label: 'sentiment de fragilité', url: '#secondPage', target: '_top' },
+					{ label: 'troubles comportementaux', url: '#secondPage', target: '_top' },
+					{ label: 'phobie', url: '#secondPage', target: '_top' },
 
-            ];
+				];
 
-            var settings = {
+				var settings = {
 
-                entries: entries,
-                width: '150%',
-                height: '100%',
-                radius: '65%',
-                radiusMin: 75,
-                bgDraw: true,
-                bgColor: 'transparent',
-                opacityOver: 1.00,
-                opacityOut: 0.05,
-                opacitySpeed: 12,
-                fov: 800,
-                speed: 0.3,
-                fontFamily: 'Oswald, Arial, sans-serif',
-                fontSize: '1.2em',
-                fontColor: '#fff',
-                fontWeight: 'normal',//bold
-                fontStyle: 'normal',//italic 
-                fontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
-                fontToUpperCase: true,
-                tooltipFontFamily: 'Oswald, Arial, sans-serif',
-                tooltipFontSize: '11',
-                tooltipFontColor: '#fff',
-                tooltipFontWeight: 'normal',//bold
-                tooltipFontStyle: 'normal',//italic 
-                tooltipFontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
-                tooltipFontToUpperCase: false,
-                tooltipTextAnchor: 'left',
-                tooltipDiffX: 0,
-                tooltipDiffY: 10
+					entries: entries,
+					width: '100%',
+					height: '100%',
+					radius: '80%',
+					radiusMin: 80,
+					bgDraw: true,
+					bgColor: 'transparent',
+					opacityOver: 1.00,
+					opacityOut: 0.05,
+					opacitySpeed: 12,
+					fov: 800,
+					speed: 0.4,
+					fontFamily: 'Oswald, Arial, sans-serif',
+					fontSize: '1.0em',
+					fontColor: '#fff',
+					fontWeight: 'normal',//bold
+					fontStyle: 'normal',//italic 
+					fontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+					fontToUpperCase: true,
+					tooltipFontFamily: 'Oswald, Arial, sans-serif',
+					tooltipFontSize: '11',
+					tooltipFontColor: '#fff',
+					tooltipFontWeight: 'normal',//bold
+					tooltipFontStyle: 'normal',//italic 
+					tooltipFontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+					tooltipFontToUpperCase: false,
+					tooltipTextAnchor: 'left',
+					tooltipDiffX: 0,
+					tooltipDiffY: 10
 
-            };
+				};
 
-            //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
-            $( '#holder' ).svg3DTagCloud( settings );
+				//var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+				$( '#holder' ).svg3DTagCloud( settings );
 
-		} );
-    }    
-    </script>
+			} );
+		}    
+		</script>
+		
+		<!-- dekstop -->
+		<script>
+		if (window.matchMedia("(min-width: 900px)").matches) {
+				$( document ).ready( function() {
+
+					var entries = [ 
+						
+						{ label: 'trouble alimentaire', url: '#secondPage', target: '_top' },
+						{ label: 'phobie', url: '#secondPage', target: '_top' },
+						{ label: 'mauvaise habitude', url: '#secondPage', target: '_top' },
+						{ label: 'manque d\'amour', url: '#secondPage', target: '_top' },
+						{ label: 'stress', url: '#secondPage', target: '_top' },
+						{ label: 'manque de confiance', url: '#secondPage', target: '_top' },
+						{ label: 'peur de prendre parole en public', url: '#secondPage', target: '_top' },
+						{ label: 'rupture sentimentale', url: '#secondPage', target: '_top' },
+						{ label: 'souffrance suite a un deuil', url: '#secondPage', target: '_top' },
+						{ label: 'manque d\'organisation', url: '#secondPage', target: '_top' },
+						{ label: 'dépression', url: '#secondPage', target: '_top' },
+						{ label: 'incertitudes professionelles', url: '#secondPage', target: '_top' },
+						{ label: 'troubles alimnetaires', url: '#secondPage', target: '_top' },
+						{ label: 'bloquage', url: '#secondPage', target: '_top' },
+						{ label: 'tensions conjugale', url: '#secondPage', target: '_top' },
+						{ label: 'difficulté à se concentrer', url: '#secondPage', target: '_top' },
+						{ label: 'mal-être', url: '#secondPage', target: '_top' },
+						{ label: 'solitude', url: '#secondPage', target: '_top' },
+						{ label: 'insosciable', url: '#secondPage', target: '_top' },
+						{ label: 'peur de la mort', url: '#secondPage', target: '_top' },
+						{ label: 'anxiété', url: '#secondPage', target: '_top' },
+						{ label: 'addiction', url: '#secondPage', target: '_top' },
+						{ label: 'difficulté d\'apprentissage', url: '#secondPage', target: '_top' },
+						{ label: 'peur d\'être parent', url: '#secondPage', target: '_top' },
+						{ label: 'insomnie', url: '#secondPage', target: '_top' },
+						{ label: 'sentiment de fragilité', url: '#secondPage', target: '_top' },
+						{ label: 'troubles comportementaux', url: '#secondPage', target: '_top' },
+						{ label: 'phobie', url: '#secondPage', target: '_top' },
+
+					];
+
+					var settings = {
+
+						entries: entries,
+						width: '100%',
+						height: '100%',
+						radius: '65%',
+						radiusMin: 75,
+						bgDraw: true,
+						bgColor: 'transparent',
+						opacityOver: 1.00,
+						opacityOut: 0.05,
+						opacitySpeed: 12,
+						fov: 800,
+						speed: 0.3,
+						fontFamily: 'Oswald, Arial, sans-serif',
+						fontSize: '1.2em',
+						fontColor: '#fff',
+						fontWeight: 'normal',//bold
+						fontStyle: 'normal',//italic 
+						fontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+						fontToUpperCase: true,
+						tooltipFontFamily: 'Oswald, Arial, sans-serif',
+						tooltipFontSize: '11',
+						tooltipFontColor: '#fff',
+						tooltipFontWeight: 'normal',//bold
+						tooltipFontStyle: 'normal',//italic 
+						tooltipFontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+						tooltipFontToUpperCase: false,
+						tooltipTextAnchor: 'left',
+						tooltipDiffX: 0,
+						tooltipDiffY: 10
+
+					};
+
+					//var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+					$( '#holder' ).svg3DTagCloud( settings );
+
+				} );
+			}    
+			</script>
+		
+	<!-- section 2 - open/close time -->	
+	<script src="js/time.js"></script>
+	<script src="fontawesome-markers.min.js"></script>
 	<script>
-if (window.matchMedia("(max-width: 900px)").matches) {
-    	$( document ).ready( function() {
+      function initMap() {
+        var uluru = {lat: 46.4579715, lng: 6.850653400000056};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: uluru,
+        });
+		  
+		var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">KINE & BACH</h1>'+
+			'<style>.firstHeading{font-size:2em;}</style>'+
+            '<div id="bodyContent">'+
+            '<p><b>cabinet de Kinésiologie</b></p>'+
+			'<p>Rue d\'Italie 27 | 1800 Vevey | Au 1er étage (sans ascenceur)</p>'+
+            '</div>'+
+            '</div>';
 
-            var entries = [ 
-                
-                { label: 'trouble alimentaire', url: '#secondPage', target: '_top' },
-                { label: 'phobie', url: '#secondPage', target: '_top' },
-                { label: 'mauvaise habitude', url: '#secondPage', target: '_top' },
-                { label: 'manque d\'amour', url: '#secondPage', target: '_top' },
-                { label: 'stress', url: '#secondPage', target: '_top' },
-                { label: 'manque de confiance', url: '#secondPage', target: '_top' },
-                { label: 'peur de prendre parole en public', url: '#secondPage', target: '_top' },
-                { label: 'rupture sentimentale', url: '#secondPage', target: '_top' },
-                { label: 'souffrance suite a un deuil', url: '#secondPage', target: '_top' },
-                { label: 'manque d\'organisation', url: '#secondPage', target: '_top' },
-                { label: 'dépression', url: '#secondPage', target: '_top' },
-                { label: 'incertitudes professionelles', url: '#secondPage', target: '_top' },
-                { label: 'troubles alimentaires', url: '#secondPage', target: '_top' },
-                { label: 'bloquage', url: '#secondPage', target: '_top' },
-                { label: 'tensions conjugale', url: '#secondPage', target: '_top' },
-                { label: 'difficulté à se concentrer', url: '#secondPage', target: '_top' },
-                { label: 'mal-être', url: '#secondPage', target: '_top' },
-                { label: 'solitude', url: '#secondPage', target: '_top' },
-                { label: 'insosciable', url: '#secondPage', target: '_top' },
-                { label: 'peur de la mort', url: '#secondPage', target: '_top' },
-                { label: 'anxiété', url: '#secondPage', target: '_top' },
-                { label: 'addiction', url: '#secondPage', target: '_top' },
-                { label: 'difficulté d\'apprentissage', url: '#secondPage', target: '_top' },
-                { label: 'peur d\'être parent', url: '#secondPage', target: '_top' },
-                { label: 'insomnie', url: '#secondPage', target: '_top' },
-                { label: 'sentiment de fragilité', url: '#secondPage', target: '_top' },
-                { label: 'troubles comportementaux', url: '#secondPage', target: '_top' },
-                { label: 'phobie', url: '#secondPage', target: '_top' },
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
 
-            ];
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+		  
+		marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+		  
+		var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+        var icons = {
+          parking: {
+            name: 'parking',
+ 			icon: iconBase + 'parking_lot_maps.png'
+          },
+        };
 
-            var settings = {
+        var features = [
+          {
+            position: new google.maps.LatLng(46.4602845, 6.846932700000025),
+            type: 'parking'
+          }, 
+        ];
 
-                entries: entries,
-                width: '100%',
-                height: '100%',
-                radius: '80%',
-                radiusMin: 80,
-                bgDraw: true,
-                bgColor: 'transparent',
-                opacityOver: 1.00,
-                opacityOut: 0.05,
-                opacitySpeed: 12,
-                fov: 800,
-                speed: 0.4,
-                fontFamily: 'Oswald, Arial, sans-serif',
-                fontSize: '1.0em',
-                fontColor: '#fff',
-                fontWeight: 'normal',//bold
-                fontStyle: 'normal',//italic 
-                fontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
-                fontToUpperCase: true,
-                tooltipFontFamily: 'Oswald, Arial, sans-serif',
-                tooltipFontSize: '11',
-                tooltipFontColor: '#fff',
-                tooltipFontWeight: 'normal',//bold
-                tooltipFontStyle: 'normal',//italic 
-                tooltipFontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
-                tooltipFontToUpperCase: false,
-                tooltipTextAnchor: 'left',
-                tooltipDiffX: 0,
-                tooltipDiffY: 10
-
-            };
-
-            //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
-            $( '#holder' ).svg3DTagCloud( settings );
-
-		} );
-    }    
+        // Create markers.
+        features.forEach(function(feature) {
+          var marker = new google.maps.Marker({
+            position: feature.position,
+            icon: icons[feature.type].icon,
+			content: '<i class="fa fa-map-marker fa-2x"></i>',
+            map: map
+          });
+        });
+		
+      }
     </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6lQ_oXYMnwlZ-bI0YgFy5_jmZiHmwUGs&callback=initMap">
+    </script>
+	
 </html>

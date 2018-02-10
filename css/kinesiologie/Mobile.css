@@ -38,6 +38,7 @@ h2 {
 }
 
 .subtitle {
+	color: inherit;
 	font-size: 10px;
 	margin-bottom: 0.8em;
 	color: #97644F;
@@ -71,7 +72,7 @@ video {
     z-index: -100;
     transform: translateX(-50%) translateY(-50%);
 	background: url(../../medias/site-assets/wallpaper.jpg) fixed no-repeat;
-	background-size:100%;
+	background-size: cover;
     transition: 1s opacity;
 }
 
@@ -356,13 +357,9 @@ video {
 		.loaded{
 			opacity:1;
 		}
-	
+		
 	/* ################################
-	--- Section 1 (Qu'est ce que c'est)
-	################################# */
-	
-	/* ################################
-	--- Section 2 (Pourquoi)
+	--- Section 1 (Pourquoi)
 	################################# */
 	
 		#pourquoi {
@@ -373,20 +370,16 @@ video {
 			font-weight: 700;
 			font-size: 1.5em;
 		}
-	
+		
 	/* ################################
-	--- Section 3 (Tarifs)
-	################################# */
-	
-	/* ################################
-	--- Section 4 (Horaires)
+	--- Section 2 (Horaires)
 	################################# */
 		
 		
 		/* section format
 		-------------------- */
 		
-		#section4 .fp-tableCell {
+		#section2 .fp-tableCell {
 			display: table-cell;
 			vertical-align: top;
 			width: 100%;
@@ -524,4 +517,153 @@ video {
 ###############                  FOOTER                   ####################
 ----------------------------------------------------------------------------*/
 
+
+
+
+
+
+	#quoi{padding-top: 15%;}
+	
+	.quoi{
+		font-size: 14px;
+		padding: 0 10%;
+		text-align: justify;
+	}
+	
+	article {
+	margin: 0 auto 0 auto;
+	padding:11% 0;
+	}
+
+	#ArticleTitle {
+		text-align: center;
+		min-width: 180px;
+		width: 40%;
+		margin: 0 auto;
+	}
+
+	.flex-container {
+		display: flex;
+		flex-flow: row wrap;
+		margin: auto;
+		margin-left: -2%;
+	  }	
+
+	.sectionB {
+		background-color: #e3e3e3;
+		margin: 1% 0;
+		width: 90%;
+		height: 15em;
+		*box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+		text-align:center;
+		/* Gradient to h1 */
+
+	}
+	
+	#s1:hover,#s2:hover{
+		background-size:140%;
+		transition: all 0.4s;
+	}
+	
+	#s3:hover,#s5:hover {
+		background-size:180%;
+		transition: all 0.4s;
+	}
+	
+	#s4:hover{
+		background-size:120%;
+		transition: all 0.4s;
+	}
+	
+	.sectionB:open{
+		position:absolute;
+		z-index:99;
+		margin:auto;
+		transform: scale(1.1);
+		transition: all 0.4s;
+	}
+
+
+	.alink {
+		display: block;
+		height: 100%;
+		width: 100%;
+		text-decoration: none;
+	}
+
+	.section-icon {
+		color: #fff;
+		margin: 75px 48%;
+		font-size: 25px;
+		position:absolute;
+		transform: translateY(-50%)!important;
+	}
+
+	.section-textB h2 {
+		font-size: 1.4em;
+		font-weight:500;
+		padding: 4em 0 0 0;
+		color: #fff;
+	}
+
+	#s1{
+		background: 
+		linear-gradient(
+		  to bottom,
+		  rgba(0, 0, 0, 0.6),
+		  rgba(0, 0, 0, 0.6)
+		),
+		url(../../medias/kinesiologie/touchforhealth.jpg);
+		background-size: 120%;
+		background-position: center
+	}
+
+
+	#s2 {
+		background: 
+		linear-gradient(
+		  to bottom,
+		  rgba(0, 0, 0, 0.6),
+		  rgba(0, 0, 0, 0.6)
+		),
+		url(../../medias/kinesiologie/braingym.jpg);
+		background-size: 120%;
+		background-position: 45% 80% ;
+	}
+
+	#s3{
+		background: 
+		linear-gradient(
+		  to bottom,
+		  rgba(0, 0, 0, 0.6),
+		  rgba(0, 0, 0, 0.6)
+		),
+		url(../../medias/kinesiologie/onebrain.jpg) center;
+		background-size: 150%;
+	}
+
+	#s4{
+		background: 
+		linear-gradient(
+		  to bottom,
+		  rgba(0, 0, 0, 0.6),
+		  rgba(0, 0, 0, 0.6)
+		),
+		url(../../medias/kinesiologie/somatique2.jpg) center;
+		background-size: 100%;
+		
+	}
+
+	#s5{
+		background: 
+		linear-gradient(
+		  to bottom,
+		  rgba(0, 0, 0, 0.6),
+		  rgba(0, 0, 0, 0.6)
+		),
+		url(../../medias/kinesiologie/energy.jpg) center;
+		background-size: 150%;
+		
+	}
+/* FOOTER ../../../../../../../../../../../../../../../../../../../../../../../../*/
 }

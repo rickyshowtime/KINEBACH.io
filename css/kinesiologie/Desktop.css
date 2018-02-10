@@ -4,7 +4,7 @@
 ###############              Default Format               ####################
 ----------------------------------------------------------------------------*/
 	
-html, body { height: 100%; max-width: 100%; margin: 0;}
+html, body { height: 100%; width: 100%; margin: 0;}
 
 html {
 	font-family: 'Gudea', sans-serif;
@@ -71,7 +71,7 @@ video {
     position: fixed;
     top: 50%;
     left: 50%;
-    max-width: 100%;
+    min-width: 100%;
     min-height: 100%;
     width: auto;
     height: auto;
@@ -386,7 +386,7 @@ video {
 		-------------------- */
 			#burgerlanguage.on{
 				display:flex;
-				margin-top: -3%;
+				margin-top: -4%;
 				padding-left: 5%;
 				font-size:1.0em;
 				z-index:99;
@@ -480,7 +480,7 @@ video {
 		
 		#logo.scroll img {
 			position: fixed;
-			z-index:97;
+			z-index:99;
 			top:2%;
 			left: 2%;
 			padding-top: 0;
@@ -508,7 +508,6 @@ video {
 			text-align: center;
 			letter-spacing: 5px;
 		}
-		
 		/* Citation
 		-------------------- */
 		#citation{
@@ -529,13 +528,9 @@ video {
 			opacity: 0;
 			transition: opacity 1s;
 		}
-	
+		
 	/* ################################
-	--- Section 1 (Qu'est ce que c'est)
-	################################# */
-	
-	/* ################################
-	--- Section 2 (Pourquoi)
+	--- Section 1 (Pourquoi)
 	################################# */
 		
 		#pourquoi {
@@ -547,21 +542,15 @@ video {
 			font-size: 3em;
 		}
 		
-		
 	/* ################################
-	--- Section 3 (Tarifs)
-	################################# */
-	
-	
-	/* ################################
-	--- Section 4 (Horaires)
+	--- Section 2 (Horaires)
 	################################# */
 		
 		
 		/* section format
 		-------------------- */
 		
-			#section4 .fp-tableCell {
+			#section2 .fp-tableCell {
 			display: table-cell;
 			vertical-align: top;
 			width: 100%;
@@ -612,7 +601,7 @@ video {
 		/* show horaires
 		-------------------- */
 		
-			/* on - off */
+			/* ON - OFF */
 
 				#modal-state {
 					display:none;
@@ -673,219 +662,11 @@ video {
 			#rdv p {
 				font-size:1.2em;
 				text-align: center;
-				margin:0.5em 0;
+				margin:0.5em;
 			}
 			
-	/* ################################
-	--- Section 5 (MAP)
-	################################# */	
-	
-	#mapwrapper {
-		position:absolute;
-		top:0;
-		width: 100%;
-		background:#fff;
-		height:70%;
-	}
-	
-	#map {
-        width: 100%;
-        height: 100%;
-        background-color: grey;
-		z-index:98;
-    }
-	
-	#maplinks {
-		color:#fff;
-		font-size:24px;
-	}
-	
-	
-	.fa-bus {
-		position: absolute;
-		top:5em;
-		right:2em;
-		z-index:99;
-		padding: 10px;
-		border-radius: 50px;
-		background: #97644F;
-	}
-	
-	.fa-train {
-		position: absolute;
-		top:7.5em;
-		right:2em;
-		z-index:99;
-		padding: 10px 11.75px;
-		border-radius: 50px;
-		background: #97644F;
-	}
 /* ---------------------------------------------------------------------------
 ###############                  FOOTER                   ####################
 ----------------------------------------------------------------------------*/
-	/* ################################
-	--- Section 6 (infos)
-	################################# */	
-	
-		#footer {
-			position:absolute;
-			width: 100%;
-			height: 80%;
-			top:70%;
-			background:#26221F;
-		}
-		
-		#footercontent {
-			width:100%;
-			display:flex;
-			flex-wrap:nowrap;
-			flex-direction:row;
-			justify-content:center;
-			align-items:stretch;
-		}
-				
-		#infofooter {	
-			color:#F4EFED;
-			order:1;
-			flex-basis:40%;
-			height:300px;
-			padding: 1% 0;
-		}
-		
-		#infospace {
-			margin-top:15px;
-		}
-		
-			
-		#infofooter li div {
-			display: inline-block;
-			background:#97644F;
-			color:#fff;
-			border-radius: 50px;
-			width:40px;
-			height:40px;
-			font-size: 1.60em;
-			margin-top:3%;
-			margin-right: 10px;
-		}
-		
-		#infofooter ul li {
-			font-size:0.7em;
-			list-style:none;
-			line-height:2em;
-		}
-	
-		#infoname {
-			font-size: 1em;
-			font-weight: 700;
-		}
-	
-		.footericon {
-			padding: 0 1em 0 0;
-		}
-	
-		#footersocial {
-			margin-top: 2%;
-		}
-	
-		#footersocial i {
-			padding: 11px;
-		}
-		
-		#footersocial .fa-youtube  {
-			padding: 11px 9px !important;
-		}
-		
-		#footersocial .fa-facebook-f  {
-			padding: 11px 14px !important;
-		}
-		
-		#hourfooter {
-			order:1;
-			flex-basis:20%;
-			height:300px;
-		}
-		
-		.viewhour {
-			display:block;
-			text-align: center;
-			margin:auto;
-			font-size: 0.8em;
-			width:100px;
-			margin-top:10%;
-			border-radius: 3px;
-			background-color:  #97644F;
-			color: #ffffff;
-			border: 0;
-			padding: 10px 10px;
-			font-weight: bold;
-		}
-		
-		#check1{
-			display:none;
-			
-		}
-		
-		/* The contact form */
-
-		#contactfooter {
-			order:3; 
-			flex-basis:40%; 
-			height:300px;
-			padding-right:2%;
-		}
-		
-		#contactfooter ul {
-			list-style:none;
-			text-align:right;
-			float: right;
-		}
-		
-
-		form input,
-		form textarea{
-			display: block;
-			border-radius: 3px;
-			box-sizing: border-box;
-			background-color: #F4EFED;
-			box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
-			border: none;
-			resize: none;
-
-			font: inherit;
-			font-size: 14px;
-			font-weight: normal;
-			color: #97644F;
-
-			width: 400px;
-			padding: 18px;
-			margin:0;
-		}
-	
-		form input:focus, form textarea:focus { 
-			outline: none !important;
-    		border:1px solid #97644F;
-    		box-shadow: 0 0 10px #97644F;
-		}
-
-		form input{
-			height: 25px;
-			margin-bottom: 15px;
-		}
-
-		form textarea{
-			height: 100px;
-			margin-bottom: 15px;
-		}
-
-		form button{
-			border-radius: 3px;
-			background-color:  #97644F;
-			color: #ffffff;
-			border: 0;
-			padding: 10px 50px;
-			font-weight: bold;
-			float:right;
-		}
 		
 }
