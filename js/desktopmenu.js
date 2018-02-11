@@ -84,21 +84,7 @@ $(document).ready(function() { "use strict";
 
 
 // get the value of the bottom of the #main element by adding the offset of that element plus its height, set it as a variable
-var mainbottom = $('#section0').offset().top + $('#section0').height();
 
-// on scroll, 
-$(window).on('scroll',function(){ "use strict";
-
-    // we round here to reduce a little workload
-    var stop = Math.round($(window).scrollTop());
-
-    if (stop > mainbottom +7000) {
-			
-		window.scrollTo(0, 5500);	
-
-    } 
-
-});
 
 $('#check1').click(function() {"use strict";
    if($(this).is(':checked')) {
